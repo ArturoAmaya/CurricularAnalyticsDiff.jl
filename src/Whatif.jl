@@ -1,6 +1,6 @@
 using CurricularAnalytics
-include("./Diff.jl")
-include("./ResultPrint.jl")
+#include("./Diff.jl")
+#include("./ResultPrint.jl")
 
 ## WHAT IF:
 #=

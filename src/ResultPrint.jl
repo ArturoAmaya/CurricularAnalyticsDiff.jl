@@ -1,4 +1,4 @@
-include("./Diff.jl")
+#include("./Diff.jl")
 @enum DesiredStat ALL CEN COM BLO DEL PRE
 
 function executive_summary_course(results::Dict{String,Any}, course_name::AbstractString)

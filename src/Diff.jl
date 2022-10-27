@@ -1,5 +1,5 @@
 using CurricularAnalytics, Crayons, Crayons.Box, CSV
-include("./HelperFns.jl")
+#include("./HelperFns.jl")
 
 # all, centrality, complexity, blocking, delay, prereq
 
