@@ -1,4 +1,5 @@
 #include("./Diff.jl")
+using Crayons, Crayons.Box
 @enum DesiredStat ALL CEN COM BLO DEL PRE
 
 function executive_summary_course(results::Dict{String,Any}, course_name::AbstractString)
@@ -463,7 +464,9 @@ end
 
 function pretty_print_curriculum_results(curriculum_results::Dict{}, desired_stat::DesiredStat)
     for (key, value) in curriculum_results["matched courses"]
-        pretty_print_course_results(value, key, desired_stat)
+        if (value["contribution to curriculum differences"]["centrality"] != 0 || value["contribution to curriculum differences"]["delay factor"] != 0 || value["contribution to curriculum differences"]["blocking factor"] != 0)
+            pretty_print_course_results(value, key, desired_stat)
+        end
     end
     if (length(curriculum_results["unmatched courses"]) != 0)
         println("*******")
