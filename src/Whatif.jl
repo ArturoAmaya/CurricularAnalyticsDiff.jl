@@ -12,7 +12,7 @@ I remove a prereq?
 @enum Edit_Type add del
 
 # What if I add a course?
-function add_course(curr::Curriculum, course_name::AbstractString, credit_hours::Real, prereqs::Dict{Any,Any}, dependencies::Dict{Any,Any})
+function add_course(curr::Curriculum, course_name::AbstractString, credit_hours::Real, prereqs::Dict{}, dependencies::Dict{})
     ## create the course in the curricular analytics sense
     new_course = Course(course_name, credit_hours)
 
