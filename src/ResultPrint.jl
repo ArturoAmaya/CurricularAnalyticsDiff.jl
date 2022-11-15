@@ -19,12 +19,14 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
                         for loss in course["lost prereqs"]
                             print(" $loss")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["gained prereqs"]) != 0)
                         print("\t gaining")
                         for gain in course["gained prereqs"]
                             print(" $gain")
                         end
+                        print(" as prerequisite(s)")
                     end
                     println("")
                 end
@@ -43,12 +45,14 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
                         for loss in course["lost prereqs"]
                             print(" $loss")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["gained prereqs"]) != 0)
                         print("\t gaining")
                         for gain in course["gained prereqs"]
                             print(" $gain")
                         end
+                        print(" as prerequisite(s)")
                     end
                     println("")
                 end
@@ -67,12 +71,14 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
                         for loss in course["lost prereqs"]
                             print(" $loss")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["gained prereqs"]) != 0)
                         print("\t gaining")
                         for gain in course["gained prereqs"]
                             print(" $gain")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["in_both"]) != 0)
                         print("\tdepending on")
@@ -96,12 +102,14 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
                         for loss in course["lost prereqs"]
                             print(" $loss")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["gained prereqs"]) != 0)
                         print("\t gaining")
                         for gain in course["gained prereqs"]
                             print(" $gain")
                         end
+                        print(" as prerequisite(s)")
                     end
                     if (length(course["in_both"]) != 0)
                         print("\tdepending on")
@@ -136,12 +144,14 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
                     for loss in course["lost prereqs"]
                         print(" $loss")
                     end
+                    print(" as prerequisite(s)")
                 end
                 if (length(course["gained prereqs"]) != 0)
                     print("\t gaining")
                     for gain in course["gained prereqs"]
                         print(" $gain")
                     end
+                    print(" as prerequisite(s)")
                 end
                 println("")
             end
