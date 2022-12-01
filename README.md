@@ -59,3 +59,4 @@ FIx the fact that new curriculums have a semester system (i.e. make new_curric m
 Add option to ignore courses where changes are 0 in pretty_print. It's very very long if you do every course but it's all 0s
 
 big todo: write ! versions of everything
+big todo: tests and documentation of everything for near-future integration to CurricularAnalytics
