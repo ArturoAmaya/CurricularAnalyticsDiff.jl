@@ -39,6 +39,10 @@ using Test
     @test courses_to_course_names([test.courses[11], test.courses[12], test.courses[15], test.courses[18]]) == ["MATH 20D", "CHEM 7L", "MATH 18", "MAE 8"]
 
     # blocking factor investigator 
-
+    @test Set(blocking_factor_investigator(test.courses[8], test)) == Set([test.courses[13], test.courses[26], test.courses[16], test.courses[20], test.courses[28], test.courses[29], test.courses[25]])
+    @test blocking_factor_investigator(test.courses[8], test) == [test.courses[13], test.courses[16], test.courses[26], test.courses[25], test.courses[20], test.courses[28], test.courses[29]]
+    @test Set(blocking_factor_investigator(test.courses[11], test)) == Set([test.courses[24], test.courses[26], test.courses[27], test.courses[31], test.courses[30], test.courses[34], test.courses[38], test.courses[32], test.courses[33], test.courses[36], test.courses[37]])
+    @test blocking_factor_investigator(test.courses[11], test) == [test.courses[24], test.courses[26], test.courses[27], test.courses[34], test.courses[30], test.courses[31], test.courses[32], test.courses[38], test.courses[33], test.courses[36], test.courses[37]]
+    @test blocking_factor_investigator(test.courses[43], test) == []
 
 end
