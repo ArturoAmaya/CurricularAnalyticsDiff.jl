@@ -33,4 +33,12 @@ using Test
     # alt longest path through to phys2b is math20a, math20b, phys 2b. This should return math20b, phys 2b
     @test longest_path_to_me(course_from_name(test, "PHYS 2B"), test, test.courses[4], true) == [test.courses[4], test.courses[8]]
     @test longest_path_to_me(course_from_name(test, "PHYS 2B"), test, test.courses[9], true) == [course_from_name(test, "PHYS 2B")]
+
+    # course to course names
+    @test typeof(courses_to_course_names([test.courses[11], test.courses[12], test.courses[15], test.courses[18]])) == Vector{AbstractString}
+    @test courses_to_course_names([test.courses[11], test.courses[12], test.courses[15], test.courses[18]]) == ["MATH 20D", "CHEM 7L", "MATH 18", "MAE 8"]
+
+    # blocking factor investigator 
+
+
 end
