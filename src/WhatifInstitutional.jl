@@ -63,7 +63,7 @@ function delete_course_institutional(curriculum::Curriculum, course_to_remove_na
     end
     affected_majors = split(course_to_remove.canonical_name, ",")
     print_affected_plans(affected_majors)
-    println("Affected plans: $(length(affected_majors))")
+    println("Number of affected plans: $(length(affected_majors))")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     return affected_majors
 end
@@ -75,7 +75,7 @@ function delete_course_institutional!(curriculum::Curriculum, course_to_remove_n
     end
     affected_majors = split(course_to_remove.canonical_name, ",")
     print_affected_plans(affected_majors)
-    println("Affected plans: $(length(affected_majors))")
+    println("Number of affected plans: $(length(affected_majors))")
 
     # let's change the curriculum
     # note: this works on a technicality, pending ! versions of the core what if functions
@@ -133,6 +133,7 @@ function add_course_institutional(curriculum::Curriculum, new_course_name::Abstr
         full_set = union(prereq_set, dep_set)
         full_set = sort(collect(full_set))
         print_affected_plans(full_set)
+        println("Number of affected plans: $(length(full_set))")
         # look at all the paths that depend on me and for each path take the union of their majors
         # then combine the two sets
         return full_set
@@ -193,6 +194,7 @@ function add_course_institutional!(curriculum::Curriculum, course_name::Abstract
         full_set = union(prereq_set, dep_set)
         full_set = sort(collect(full_set))
         print_affected_plans(full_set)
+        println("Number of affected plans: $(length(full_set))")
         # look at all the paths that depend on me and for each path take the union of their majors
         # then combine the two sets
         return full_set, new_curriculum
@@ -212,7 +214,7 @@ function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq
     affected_majors = split(course_with_new_prereq.canonical_name, ",")
 
     print_affected_plans(affected_majors)
-    println("Affected plans: $(length(affected_majors))")
+    println("Number of affected plans: $(length(affected_majors))")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     # also note that this doesn't explain HOW the affected plans are affected, simply that they are
     return affected_majors
@@ -227,7 +229,7 @@ function add_prereq_institutional!(curriculum::Curriculum, course_with_new_prere
     affected_majors = split(course_with_new_prereq_course.canonical_name, ",")
 
     print_affected_plans(affected_majors)
-    println("Affected plans: $(length(affected_majors))")
+    println("Number of affected plans: $(length(affected_majors))")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     # also note that this doesn't explain HOW the affected plans are affected, simply that they are
     return affected_majors, new_curric
