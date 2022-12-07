@@ -85,8 +85,8 @@ function delete_course_institutional!(curriculum::Curriculum, course_to_remove_n
 end
 
 
-function add_course_institutional(curriculum::Curriculum, course_name::AbstractString, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
-    new_curriculum = add_course(curriculum, course_name, new_course_credit_hours, prereqs, dependencies)
+function add_course_institutional(curriculum::Curriculum, new_course_name::AbstractString, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
+    new_curriculum = add_course(curriculum, new_course_name, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
     errors = IOBuffer()
     isvalid_curriculum(new_curriculum, errors)
