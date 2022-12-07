@@ -23,8 +23,8 @@ function delete_prerequisite_institutional(curriculum::Curriculum, target::Abstr
     if ret[1] == ""
         popfirst!(ret)
     end
-    print_affected_plans(ret)
-    println("Number of affected plans: $(length(ret))")
+    count = print_affected_plans(ret)
+    println("Number of affected plans: $(count)")
     return ret
 end
 
@@ -51,8 +51,8 @@ function delete_prerequisite_institutional!(curriculum::Curriculum, target::Abst
     if ret[1] == ""
         popfirst!(ret)
     end
-    print_affected_plans(ret)
-    println("Number of affected plans: $(length(ret))")
+    count = print_affected_plans(ret)
+    println("Number of affected plans: $(count)")
     return ret
 end
 
@@ -62,8 +62,8 @@ function delete_course_institutional(curriculum::Curriculum, course_to_remove_na
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
     affected_majors = split(course_to_remove.canonical_name, ",")
-    print_affected_plans(affected_majors)
-    println("Number of affected plans: $(length(affected_majors))")
+    count = print_affected_plans(affected_majors)
+    println("Number of affected plans: $(count)")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     return affected_majors
 end
@@ -74,8 +74,8 @@ function delete_course_institutional!(curriculum::Curriculum, course_to_remove_n
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
     affected_majors = split(course_to_remove.canonical_name, ",")
-    print_affected_plans(affected_majors)
-    println("Number of affected plans: $(length(affected_majors))")
+    count = print_affected_plans(affected_majors)
+    println("Number of affected plans: $(count)")
 
     # let's change the curriculum
     # note: this works on a technicality, pending ! versions of the core what if functions
@@ -132,8 +132,8 @@ function add_course_institutional(curriculum::Curriculum, new_course_name::Abstr
         end
         full_set = union(prereq_set, dep_set)
         full_set = sort(collect(full_set))
-        print_affected_plans(full_set)
-        println("Number of affected plans: $(length(full_set))")
+        count = print_affected_plans(full_set)
+        println("Number of affected plans: $(count)")
         # look at all the paths that depend on me and for each path take the union of their majors
         # then combine the two sets
         return full_set
@@ -193,8 +193,8 @@ function add_course_institutional!(curriculum::Curriculum, course_name::Abstract
         end
         full_set = union(prereq_set, dep_set)
         full_set = sort(collect(full_set))
-        print_affected_plans(full_set)
-        println("Number of affected plans: $(length(full_set))")
+        count = print_affected_plans(full_set)
+        println("Number of affected plans: $(count)")
         # look at all the paths that depend on me and for each path take the union of their majors
         # then combine the two sets
         return full_set, new_curriculum
@@ -213,8 +213,8 @@ function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq
     end
     affected_majors = split(course_with_new_prereq.canonical_name, ",")
 
-    print_affected_plans(affected_majors)
-    println("Number of affected plans: $(length(affected_majors))")
+    count = print_affected_plans(affected_majors)
+    println("Number of affected plans: $(count)")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     # also note that this doesn't explain HOW the affected plans are affected, simply that they are
     return affected_majors
@@ -228,8 +228,8 @@ function add_prereq_institutional!(curriculum::Curriculum, course_with_new_prere
     new_curric = add_prereq(curriculum, course_with_new_prereq, prereq, pre)
     affected_majors = split(course_with_new_prereq_course.canonical_name, ",")
 
-    print_affected_plans(affected_majors)
-    println("Number of affected plans: $(length(affected_majors))")
+    count = print_affected_plans(affected_majors)
+    println("Number of affected plans: $(count)")
     # NOTE THIS DOESNT ACTUALLY CHANGE THE CURRICULUM OBJECT OK?
     # also note that this doesn't explain HOW the affected plans are affected, simply that they are
     return affected_majors, new_curric
@@ -252,6 +252,7 @@ function print_affected_plans(affected_plans)
         end
     end
     println()
+    return count
 end
 
 ## what is in the 20c canon name but not in the calculated set
