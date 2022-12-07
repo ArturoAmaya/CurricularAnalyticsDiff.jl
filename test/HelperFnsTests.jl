@@ -45,4 +45,10 @@ using Test
     @test blocking_factor_investigator(test.courses[11], test) == [test.courses[24], test.courses[26], test.courses[27], test.courses[34], test.courses[30], test.courses[31], test.courses[32], test.courses[38], test.courses[33], test.courses[36], test.courses[37]]
     @test blocking_factor_investigator(test.courses[43], test) == []
 
+    # delay factor investigator
+    # Note that this doesn't match the canonical longest path determined in the visualization software. This is interesting.
+    @test delay_factor_investigator(test.courses[8], test) == [test.courses[2], test.courses[5], test.courses[8], test.courses[13], test.courses[25], test.courses[28]]
+    @test typeof(delay_factor_investigator(test.courses[8], test)) == Vector{Course}
+    @test delay_factor_investigator(test.courses[43], test) == [test.courses[43]]
+
 end
