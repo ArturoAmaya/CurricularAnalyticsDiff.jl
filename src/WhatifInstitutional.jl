@@ -89,8 +89,8 @@ function delete_course_institutional(curriculum::Curriculum, course_to_remove_na
         println("Number of affected plans: $(count)")
         return full_set
     else
-        println("This course hasn't been hooked up to anything. It doesn't affect any plans other than the one it is in")
-        return Set()
+        #println("This course hasn't been hooked up to anything. It doesn't affect any plans other than the one it is in")
+        return sort(collect(Set(split(course_to_remove.canonical_name, ","))))
     end
 end
 
