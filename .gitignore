@@ -2,6 +2,6 @@
 /files/*
 # except these for testing purposes
 !/files/SY-CurriculumPlan-BE25.csv
-!/files/SY-CurriculumPlan-CE25 2015.csv
-!/files/SY-CurriculumPlan-CE25 2016.csv
+!/files/SY-CurriculumPlan-CE252015.csv
+!/files/SY-CurriculumPlan-CE252016.csv
 
