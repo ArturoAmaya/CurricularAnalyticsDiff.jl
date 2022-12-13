@@ -60,4 +60,9 @@ using Test
     @test typeof(delay_factor_investigator(test.courses[8], test)) == Vector{Course}
     @test delay_factor_investigator(test.courses[43], test) == [test.courses[43]]
 
+    # centrality investigator
+    ## the centrlaity investigator doesn't track centrality paths for sink or source nodes. It should though. that's an issue for later TODO
+    @test centrality_investigator(test.courses[1], test) == []
+    @test centrality_investigator(test.courses[37], test) == []
+    # TODO: more tests, with actual things
 end
