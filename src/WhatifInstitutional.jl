@@ -1,10 +1,10 @@
 function delete_prerequisite_institutional(curriculum::Curriculum, target::AbstractString, prereq::AbstractString)
-    target_course = course_from_name(curriculum, target)
+    target_course = course_from_name(target, curriculum)
     # error check
     if typeof(target_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
-    prereq_course = course_from_name(curriculum, prereq)
+    prereq_course = course_from_name(prereq, curriculum)
     # error check
     if typeof(prereq_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your prerequisite course in the given curriculum. Make sure you got the name exactly right."))
@@ -29,12 +29,12 @@ function delete_prerequisite_institutional(curriculum::Curriculum, target::Abstr
 end
 
 function delete_prerequisite_institutional!(curriculum::Curriculum, target::AbstractString, prereq::AbstractString)
-    target_course = course_from_name(curriculum, target)
+    target_course = course_from_name(target, curriculum)
     # error check
     if typeof(target_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
-    prereq_course = course_from_name(curriculum, prereq)
+    prereq_course = course_from_name(prereq, curriculum)
     # error check
     if typeof(prereq_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your prerequisite course in the given curriculum. Make sure you got the name exactly right."))
@@ -57,7 +57,7 @@ function delete_prerequisite_institutional!(curriculum::Curriculum, target::Abst
 end
 
 function delete_course_institutional(curriculum::Curriculum, course_to_remove_name::AbstractString)
-    course_to_remove = course_from_name(curriculum, course_to_remove_name)
+    course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
@@ -98,7 +98,7 @@ function delete_course_institutional(curriculum::Curriculum, course_to_remove_na
 end
 
 function delete_course_institutional!(curriculum::Curriculum, course_to_remove_name::AbstractString)
-    course_to_remove = course_from_name(curriculum, course_to_remove_name)
+    course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
@@ -122,7 +122,7 @@ function add_course_institutional(curriculum::Curriculum, new_course_name::Abstr
     # get all the paths that depend on me
     ## first, get me
     #UCSD = read_csv("./targets/condensed.csv");
-    course = course_from_name(new_curriculum, new_course_name)
+    course = course_from_name(new_course_name, new_curriculum)
     my_centrality_paths = centrality_investigator(course, new_curriculum)
     if length(my_centrality_paths) > 0
         # ok actually do stuff
@@ -183,7 +183,7 @@ function add_course_institutional!(curriculum::Curriculum, course_name::Abstract
     # get all the paths that depend on me
     ## first, get me
     #UCSD = read_csv("./targets/condensed.csv");
-    course = course_from_name(new_curriculum, new_course_name)
+    course = course_from_name(new_course_name, new_curriculum)
     my_centrality_paths = centrality_investigator(course, new_curriculum)
     if length(my_centrality_paths) > 0
         # ok actually do stuff
@@ -236,7 +236,7 @@ function add_course_institutional!(curriculum::Curriculum, course_name::Abstract
 end
 
 function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq::AbstractString, prereq::AbstractString)
-    course_with_new_prereq = course_from_name(curriculum, course_with_new_prereq)
+    course_with_new_prereq = course_from_name(course_with_new_prereq, curriculum)
     if typeof(course_with_new_prereq) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
@@ -250,7 +250,7 @@ function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq
 end
 
 function add_prereq_institutional!(curriculum::Curriculum, course_with_new_prereq::AbstractString, prereq::AbstractString)
-    course_with_new_prereq_course = course_from_name(curriculum, course_with_new_prereq)
+    course_with_new_prereq_course = course_from_name(course_with_new_prereq, curriculum)
     if typeof(course_with_new_prereq) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end

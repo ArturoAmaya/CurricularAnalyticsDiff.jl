@@ -122,8 +122,8 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
         end
         # check them against matching courses in c2 looking for different prereqs
         for course in all_courses_not_in_c2
-            c1 = course_from_name(curriculum1, course)
-            c2 = course_from_name(curriculum2, course)
+            c1 = course_from_name(course, curriculum1)
+            c2 = course_from_name(course, curriculum2)
             # find their prerequisites
             prereqs_in_curr1 = Set(courses_to_course_names(get_course_prereqs(c1, curriculum1)))
 
@@ -152,8 +152,8 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
         end
         # check them against matching courses in c2 looking for different prereqs
         for course in all_courses_not_in_c1
-            c1 = course_from_name(curriculum1, course)
-            c2 = course_from_name(curriculum2, course)
+            c1 = course_from_name(course, curriculum1)
+            c2 = course_from_name(course, curriculum2)
             # find their prerequisites
             isnothing(c1) ? prereqs_in_curr1 = Set() :
             prereqs_in_curr1 = Set(courses_to_course_names(get_course_prereqs(c1, curriculum1)))
@@ -200,8 +200,8 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
             for course_name in not_in_c2_unbl_field
                 explanations_blockingfactor["not in c2 ufield"][course_name] = Dict()
                 # find course to match name in curriculum1 and curriculum2
-                course_in_curr1 = course_from_name(curriculum1, course_name)
-                course_in_curr2 = course_from_name(curriculum2, course_name)
+                course_in_curr1 = course_from_name(course_name, curriculum1)
+                course_in_curr2 = course_from_name(course_name, curriculum2)
                 # and find c1 prereqs
                 prereqs_in_curr1 = Set(courses_to_course_names(get_course_prereqs(course_in_curr1, curriculum1)))
                 if (!isnothing(course_in_curr2))
@@ -245,8 +245,8 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
             for course_name in not_in_c1_unbl_field
                 explanations_blockingfactor["not in c1 ufield"][course_name] = Dict()
                 # find course to match name in curriculum1 and curriculum2
-                course_in_curr1 = course_from_name(curriculum1, course_name)
-                course_in_curr2 = course_from_name(curriculum2, course_name)
+                course_in_curr1 = course_from_name(course_name, curriculum1)
+                course_in_curr2 = course_from_name(course_name, curriculum2)
                 # find prereqs in c2
                 prereqs_in_curr2 = Set(courses_to_course_names(get_course_prereqs(course_in_curr2, curriculum2)))
                 if (!isnothing(course_in_curr1))
@@ -308,8 +308,8 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
         for course in all_courses_in_paths
             explanations_delayfactor["courses involved"][course] = Dict()
             # find course to match name in curriculum1 and curriculum2
-            course_in_curr1 = course_from_name(curriculum1, course)
-            course_in_curr2 = course_from_name(curriculum2, course)
+            course_in_curr1 = course_from_name(course, curriculum1)
+            course_in_curr2 = course_from_name(course, curriculum2)
             # find their prerequisites
             isnothing(course_in_curr1) ? prereqs_in_curr1 = Set() :
             prereqs_in_curr1 = Set(courses_to_course_names(get_course_prereqs(course_in_curr1, curriculum1)))
@@ -488,7 +488,7 @@ function curricular_diff(curriculum1::Curriculum, curriculum2::Curriculum, verbo
                     # try one more time with the course_find method
                     (found, course1_name, course2_name) = course_find(course.name, redundant_course_names, curriculum2)
                     if (found)
-                        results = course_diff(course, course_from_name(curriculum2, course2_name), curriculum1, curriculum2, verbose)
+                        results = course_diff(course, course_from_name(course2_name, curriculum2), curriculum1, curriculum2, verbose)
                         contribution = results["contribution to curriculum differences"]
                         for (key, value) in runningTally
                             runningTally[key] += contribution[key]
