@@ -1,7 +1,4 @@
 using CurricularAnalytics, Crayons, Crayons.Box, CSV
-#include("./HelperFns.jl")
-
-# all, centrality, complexity, blocking, delay, prereq
 
 function course_diff_for_unmatched_course(course::Course, curriculum::Curriculum, c1::Bool)
     results = Dict()
