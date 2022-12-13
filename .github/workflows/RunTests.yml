@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: ls -la
+      - run: ls ./files
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
