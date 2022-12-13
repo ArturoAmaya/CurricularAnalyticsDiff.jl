@@ -12,7 +12,7 @@ I remove a prereq?
 @enum Edit_Type add del
 
 # What if I add a course?
-function add_course(curr::Curriculum, course_name::AbstractString, credit_hours::Real, prereqs::Dict, dependencies::Dict)
+function add_course(course_name::AbstractString, curr::Curriculum, credit_hours::Real, prereqs::Dict, dependencies::Dict)
     ## create the course in the curricular analytics sense
     new_course = Course(course_name, credit_hours)
     modded_curric = deepcopy(curr)
@@ -43,7 +43,7 @@ function add_course(curr::Curriculum, course_name::AbstractString, credit_hours:
 end
 
 # What if I remove a course?
-function remove_course(curr::Curriculum, course_name::AbstractString)
+function remove_course(course_name::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
     course = course_from_name(course_name, modded_curric)
     if typeof(course) == Nothing
@@ -75,7 +75,7 @@ function remove_course(curr::Curriculum, course_name::AbstractString)
 end
 
 # What if I add a prereq to this course?
-function add_prereq(curr::Curriculum, course_name::AbstractString, added_prereq::AbstractString, reqtype::Requisite)
+function add_prereq(course_name::AbstractString, added_prereq::AbstractString, curr::Curriculum, reqtype::Requisite)
     modded_curric = deepcopy(curr)
 
     target_course = course_from_name(course_name, modded_curric)
@@ -91,7 +91,7 @@ function add_prereq(curr::Curriculum, course_name::AbstractString, added_prereq:
 end
 
 # What if I remove to_remove from course_name?
-function remove_prereq(curr::Curriculum, course_name::AbstractString, to_remove::AbstractString)
+function remove_prereq(course_name::AbstractString, to_remove::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
 
     course = course_from_name(course_name, modded_curric)
