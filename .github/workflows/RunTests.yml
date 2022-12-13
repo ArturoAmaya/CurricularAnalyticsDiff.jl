@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: cat ./files/"SY-Curriculum Plan-BE25.csv"
+      - run: cat ./files/SY-CurriculumPlan-BE25.csv
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
