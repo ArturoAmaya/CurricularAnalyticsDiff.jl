@@ -46,7 +46,7 @@ function prereq_print(prereqs::Set{AbstractString})
     string
 end
 
-function get_course_prereqs(curriculum::Curriculum, course::Course)
+function get_course_prereqs(course::Course, curriculum::Curriculum)
     # get all the prereqs
     course_prereqs = Vector{Course}()
     for (key, value) in course.requisites
