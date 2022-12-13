@@ -2,7 +2,7 @@ using CurricularAnalyticsDiff
 using CurricularAnalytics
 using Test
 
-@testset "HelperFns tests.jl" begin
+@testset "HelperFns tests" begin
     test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
 
     # prereq_print 
