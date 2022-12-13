@@ -9,6 +9,8 @@ using Test
     @test typeof(prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "MATH 20E"]))) == String
     @test prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])) == join(
         append!([" "], [p * " " for p in Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])]))
+    @test prereq_print(Set{AbstractString}([""])) == "  "
+    @test prereq_print(Set{AbstractString}()) == " "
 
 
     # course from name
