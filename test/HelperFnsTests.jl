@@ -5,18 +5,18 @@ using Test
 @testset "HelperFns tests.jl" begin
     test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
     # course from name
-    @test course_from_name(test, "MATH 20A") === test.courses[2]
-    @test course_from_name(test, "PHYS 2A") === test.courses[5]
-    @test typeof(course_from_name(test, "BENG 130")) == Course
+    @test course_from_name("MATH 20A", test) === test.courses[2]
+    @test course_from_name("PHYS 2A", test) === test.courses[5]
+    @test typeof(course_from_name("BENG 130", test)) == Course
 
     # get course prereqs
-    @test get_course_prereqs(test, test.courses[2]) == Vector{Course}()
-    @test get_course_prereqs(test, test.courses[5]) == Vector{Course}([test.courses[2]])
-    @test typeof(get_course_prereqs(test, test.courses[5])) == Vector{Course}
-    @test get_course_prereqs(test, test.courses[22]) == Vector{Course}([test.courses[6], test.courses[15], test.courses[7]])
-    @test get_course_prereqs(test, test.courses[26]) == Vector{Course}([test.courses[5], test.courses[4], test.courses[2], test.courses[11], test.courses[8], test.courses[14], test.courses[3]])
-    @test get_course_prereqs(test, test.courses[26]) != Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]])
-    @test Set(get_course_prereqs(test, test.courses[26])) == Set(Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]]))
+    @test get_course_prereqs(test.courses[2], test) == Vector{Course}()
+    @test get_course_prereqs(test.courses[5], test) == Vector{Course}([test.courses[2]])
+    @test typeof(get_course_prereqs(test.courses[5], test)) == Vector{Course}
+    @test get_course_prereqs(test.courses[22], test) == Vector{Course}([test.courses[6], test.courses[15], test.courses[7]])
+    @test get_course_prereqs(test.courses[26], test) == Vector{Course}([test.courses[5], test.courses[4], test.courses[2], test.courses[11], test.courses[8], test.courses[14], test.courses[3]])
+    @test get_course_prereqs(test.courses[26], test) != Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]])
+    @test Set(get_course_prereqs(test.courses[26], test)) == Set(Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]]))
 
     # courses that depend on me (first level only)
     @test typeof(courses_that_depend_on_me(test.courses[10], test)) == Vector{Course}
@@ -27,12 +27,12 @@ using Test
     # longest path to me
     @test typeof(longest_path_to_me(test.courses[11], test, test.courses[11], false)) == Vector{Course}
     @test longest_path_to_me(test.courses[11], test, test.courses[11], false) == [test.courses[2], test.courses[4], test.courses[7], test.courses[11]]
-    @test longest_path_to_me(course_from_name(test, "BENG 110"), test, test.courses[24], false) == [course_from_name(test, "MATH 20A"), course_from_name(test, "MATH 20B"), course_from_name(test, "MATH 20C"), course_from_name(test, "MATH 20D"), course_from_name(test, "BENG 110")]
+    @test longest_path_to_me(course_from_name("BENG 110", test), test, test.courses[24], false) == [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 110", test)]
     # canonical longest path through to phys 2b is math 20a phys 2a phys2b
-    @test longest_path_to_me(course_from_name(test, "PHYS 2B"), test, test.courses[8], false) == [test.courses[2], test.courses[5], test.courses[8]]
+    @test longest_path_to_me(course_from_name("PHYS 2B", test), test, test.courses[8], false) == [test.courses[2], test.courses[5], test.courses[8]]
     # alt longest path through to phys2b is math20a, math20b, phys 2b. This should return math20b, phys 2b
-    @test longest_path_to_me(course_from_name(test, "PHYS 2B"), test, test.courses[4], true) == [test.courses[4], test.courses[8]]
-    @test longest_path_to_me(course_from_name(test, "PHYS 2B"), test, test.courses[9], true) == [course_from_name(test, "PHYS 2B")]
+    @test longest_path_to_me(course_from_name("PHYS 2B", test), test, test.courses[4], true) == [test.courses[4], test.courses[8]]
+    @test longest_path_to_me(course_from_name("PHYS 2B", test), test, test.courses[9], true) == [course_from_name("PHYS 2B", test)]
 
     # course to course names
     @test typeof(courses_to_course_names([test.courses[11], test.courses[12], test.courses[15], test.courses[18]])) == Vector{AbstractString}

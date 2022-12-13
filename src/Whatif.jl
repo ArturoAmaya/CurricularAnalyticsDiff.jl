@@ -12,14 +12,14 @@ I remove a prereq?
 @enum Edit_Type add del
 
 # What if I add a course?
-function add_course(curr::Curriculum, course_name::AbstractString, credit_hours::Real, prereqs::Dict, dependencies::Dict)
+function add_course(course_name::AbstractString, curr::Curriculum, credit_hours::Real, prereqs::Dict, dependencies::Dict)
     ## create the course in the curricular analytics sense
     new_course = Course(course_name, credit_hours)
     modded_curric = deepcopy(curr)
     ## hook it up to the curriculum
     # loop through the names of its prereqs and find them in modded_curric (so we don't alter the original)
     for (prereq, req_type) in prereqs
-        prereq_course = course_from_name(modded_curric, prereq)
+        prereq_course = course_from_name(prereq, modded_curric)
         if typeof(prereq_course) == Nothing
             throw(ArgumentError("I'm sorry, we couldn't find your requested prerequisite in the given curriculum. Are you sure its name matched the one in the file exactly?"))
         end
@@ -27,7 +27,7 @@ function add_course(curr::Curriculum, course_name::AbstractString, credit_hours:
     end
     # loop through the names of its dependencies and find them in modded_curric
     for (dep, type) in dependencies
-        dependent_course = course_from_name(modded_curric, dep)
+        dependent_course = course_from_name(dep, modded_curric)
         if typeof(dependent_course) == Nothing
             throw(ArgumentError("I'm sorry, we couldn't find your requested dependent course in the given curriculum. Are you sure its name matched the one in the file exactly?"))
         end
@@ -43,9 +43,9 @@ function add_course(curr::Curriculum, course_name::AbstractString, credit_hours:
 end
 
 # What if I remove a course?
-function remove_course(curr::Curriculum, course_name::AbstractString)
+function remove_course(course_name::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
-    course = course_from_name(modded_curric, course_name)
+    course = course_from_name(course_name, modded_curric)
     if typeof(course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested course in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
@@ -75,14 +75,14 @@ function remove_course(curr::Curriculum, course_name::AbstractString)
 end
 
 # What if I add a prereq to this course?
-function add_prereq(curr::Curriculum, course_name::AbstractString, added_prereq::AbstractString, reqtype::Requisite)
+function add_prereq(course_name::AbstractString, added_prereq::AbstractString, curr::Curriculum, reqtype::Requisite)
     modded_curric = deepcopy(curr)
 
-    target_course = course_from_name(modded_curric, course_name)
+    target_course = course_from_name(course_name, modded_curric)
     if typeof(target_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested course in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
-    added_prq = course_from_name(modded_curric, added_prereq)
+    added_prq = course_from_name(course_name, modded_curric)
     if typeof(added_prq) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested prerequisite in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
@@ -91,14 +91,14 @@ function add_prereq(curr::Curriculum, course_name::AbstractString, added_prereq:
 end
 
 # What if I remove to_remove from course_name?
-function remove_prereq(curr::Curriculum, course_name::AbstractString, to_remove::AbstractString)
+function remove_prereq(course_name::AbstractString, to_remove::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
 
-    course = course_from_name(modded_curric, course_name)
+    course = course_from_name(course_name, modded_curric)
     if typeof(course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested course in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
-    to_remove_course = course_from_name(modded_curric, to_remove)
+    to_remove_course = course_from_name(to_remove, modded_curric)
     if typeof(to_remove_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested prerequisite in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
