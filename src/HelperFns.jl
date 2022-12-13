@@ -58,7 +58,7 @@ function get_course_prereqs(course::Course, curriculum::Curriculum)
     course_prereqs
 end
 
-function course_from_name(curriculum::Curriculum, course_name::AbstractString)
+function course_from_name(course_name::AbstractString, curriculum::Curriculum)
     for c in curriculum.courses
         if c.name == course_name
             return c
