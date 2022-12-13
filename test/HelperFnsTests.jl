@@ -10,13 +10,13 @@ using Test
     @test typeof(course_from_name(test, "BENG 130")) == Course
 
     # get course prereqs
-    @test get_course_prereqs(test, test.courses[2]) == Vector{Course}()
-    @test get_course_prereqs(test, test.courses[5]) == Vector{Course}([test.courses[2]])
-    @test typeof(get_course_prereqs(test, test.courses[5])) == Vector{Course}
-    @test get_course_prereqs(test, test.courses[22]) == Vector{Course}([test.courses[6], test.courses[15], test.courses[7]])
-    @test get_course_prereqs(test, test.courses[26]) == Vector{Course}([test.courses[5], test.courses[4], test.courses[2], test.courses[11], test.courses[8], test.courses[14], test.courses[3]])
-    @test get_course_prereqs(test, test.courses[26]) != Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]])
-    @test Set(get_course_prereqs(test, test.courses[26])) == Set(Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]]))
+    @test get_course_prereqs(test.courses[2], test) == Vector{Course}()
+    @test get_course_prereqs(test.courses[5], test) == Vector{Course}([test.courses[2]])
+    @test typeof(get_course_prereqs(test.courses[5], test)) == Vector{Course}
+    @test get_course_prereqs(test.courses[22], test) == Vector{Course}([test.courses[6], test.courses[15], test.courses[7]])
+    @test get_course_prereqs(test.courses[26], test) == Vector{Course}([test.courses[5], test.courses[4], test.courses[2], test.courses[11], test.courses[8], test.courses[14], test.courses[3]])
+    @test get_course_prereqs(test.courses[26], test) != Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]])
+    @test Set(get_course_prereqs(test.courses[26], test)) == Set(Vector{Course}([test.courses[4], test.courses[5], test.courses[11], test.courses[8], test.courses[14], test.courses[2], test.courses[3]]))
 
     # courses that depend on me (first level only)
     @test typeof(courses_that_depend_on_me(test.courses[10], test)) == Vector{Course}
