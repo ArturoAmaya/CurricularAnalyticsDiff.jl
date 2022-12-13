@@ -4,6 +4,13 @@ using Test
 
 @testset "HelperFns tests.jl" begin
     test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
+
+    # prereq_print 
+    @test typeof(prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "MATH 20E"]))) == String
+    @test prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])) == join(
+        append!([" "], [p * " " for p in Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])]))
+
+
     # course from name
     @test course_from_name("MATH 20A", test) === test.courses[2]
     @test course_from_name("PHYS 2A", test) === test.courses[5]
