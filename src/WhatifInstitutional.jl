@@ -1,4 +1,4 @@
-function delete_prerequisite_institutional(curriculum::Curriculum, target::AbstractString, prereq::AbstractString)
+function delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
     target_course = course_from_name(target, curriculum)
     # error check
     if typeof(target_course) == Nothing
@@ -28,7 +28,7 @@ function delete_prerequisite_institutional(curriculum::Curriculum, target::Abstr
     return ret
 end
 
-function delete_prerequisite_institutional!(curriculum::Curriculum, target::AbstractString, prereq::AbstractString)
+function delete_prerequisite_institutional!(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
     target_course = course_from_name(target, curriculum)
     # error check
     if typeof(target_course) == Nothing
@@ -56,7 +56,7 @@ function delete_prerequisite_institutional!(curriculum::Curriculum, target::Abst
     return ret
 end
 
-function delete_course_institutional(curriculum::Curriculum, course_to_remove_name::AbstractString)
+function delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum)
     course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
@@ -97,7 +97,7 @@ function delete_course_institutional(curriculum::Curriculum, course_to_remove_na
     end
 end
 
-function delete_course_institutional!(curriculum::Curriculum, course_to_remove_name::AbstractString)
+function delete_course_institutional!(course_to_remove_name::AbstractString, curriculum::Curriculum)
     course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
@@ -114,7 +114,7 @@ function delete_course_institutional!(curriculum::Curriculum, course_to_remove_n
 end
 
 
-function add_course_institutional(curriculum::Curriculum, new_course_name::AbstractString, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
+function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
     new_curriculum = add_course(curriculum, new_course_name, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
     errors = IOBuffer()
@@ -175,7 +175,7 @@ function add_course_institutional(curriculum::Curriculum, new_course_name::Abstr
 end
 
 # TODO: edit to add the 
-function add_course_institutional!(curriculum::Curriculum, course_name::AbstractString, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
+function add_course_institutional!(course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
     new_curriculum = add_course(curriculum, course_name, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
     errors = IOBuffer()
