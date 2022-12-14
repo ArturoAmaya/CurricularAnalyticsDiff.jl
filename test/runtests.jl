@@ -1,5 +1,4 @@
-#using CurricularAnalyticsDiff
-include("../src/CurricularAnalyticsDiff.jl")
+using CurricularAnalyticsDiff
 using CurricularAnalytics
 using Test
 
