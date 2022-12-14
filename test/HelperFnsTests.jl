@@ -51,4 +51,5 @@ using Test
     @test typeof(delay_factor_investigator(test.courses[8], test)) == Vector{Course}
     @test delay_factor_investigator(test.courses[43], test) == [test.courses[43]]
 
+    # centrality factor investigator
 end
