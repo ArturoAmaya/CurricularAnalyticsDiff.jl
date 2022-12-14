@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Run tests
+name: Run Helper Function Tests
 
 # Controls when the workflow will run
 on:
@@ -35,7 +35,7 @@ jobs:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
       #this is the most expensive part of the process- uses: julia-actions/julia-buildpkg@v1
-      - run: julia -e 'import Pkg; Pkg.add("CurricularAnalytics"); Pkg.add("CSV"); Pkg.add("Crayons"); Pkg.add("JSON"); Pkg.activate("."); println(Pkg.status());include("./test/runtests.jl")'
+      - run: julia -e 'import Pkg; Pkg.add("CurricularAnalytics"); Pkg.add("CSV"); Pkg.add("Crayons"); Pkg.add("JSON"); Pkg.activate("."); println(Pkg.status());include("./test/HelperFnsTests.jl")'
       #- run: julia -e 'import Pkg; Pkg.add("CSV")'
       #- run: julia -e 'import Pkg; Pkg.add("Crayons")'
       #- run: julia -e 'import Pkg; Pkg.add("JSON")'
