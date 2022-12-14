@@ -41,5 +41,5 @@ jobs:
       - run: julia -e 'import Pkg; Pkg.add("Crayons")'
       - run: julia -e 'import Pkg; Pkg.add("JSON")'
       - run: julia -e 'import Pkg; Pkg.activate(".")'
-      #- run: julia -e 'import Pkg; Pkg.add(CurricularAnalyticsDiff)'
+      - run: julia -e 'import Pkg; Pkg.add(CurricularAnalyticsDiff)'
       - run: julia ./test/runtests.jl
