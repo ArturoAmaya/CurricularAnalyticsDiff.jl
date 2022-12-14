@@ -3,7 +3,7 @@ using CurricularAnalytics
 using Test
 
 @testset "HelperFns tests.jl" begin
-    test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
+    test = read_csv("./files/SY-CurriculumPlan-BE25.csv")
     # course from name
     @test course_from_name("MATH 20A", test) === test.courses[2]
     @test course_from_name("PHYS 2A", test) === test.courses[5]
