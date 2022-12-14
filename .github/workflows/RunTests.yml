@@ -40,7 +40,7 @@ jobs:
       - run: julia -e 'import Pkg; Pkg.add("CSV")'
       - run: julia -e 'import Pkg; Pkg.add("Crayons")'
       - run: julia -e 'import Pkg; Pkg.add("JSON")'
-      - run: julia -e 'import Pkg; Pkg.activate(".")'
-      - run: julia -e 'import Pkg; println(Pkg.status())'
+      - run: julia -e 'import Pkg; Pkg.activate("."); println(Pkg.status())'
+      #- run: julia -e 'import Pkg; '
       #- run: julia -e 'import Pkg; Pkg.add("CurricularAnalyticsDiff")'
       - run: julia ./test/runtests.jl
