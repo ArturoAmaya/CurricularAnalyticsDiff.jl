@@ -37,5 +37,6 @@ jobs:
       - uses: julia-actions/julia-buildpkg@v1
       - run: julia -e 'println("AAAAH")'
       - run: julia -e 'import Pkg; Pkg.add("CurricularAnalytics")'
+      - run: julia -e 'import Pkg; Pkg.activate(".")'
       - run: julia -e 'import Pkg; Pkg.add(CurricularAnalyticsDiff)'
       - run: julia ./test/runtests.jl
