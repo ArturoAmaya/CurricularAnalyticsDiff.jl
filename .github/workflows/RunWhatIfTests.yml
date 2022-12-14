@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Run Helper Function Tests
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    paths:
+      - '**.jl'
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        julia-version: ['1.7', '1.8']
+        julia-arch: [x64] #x86
+        os: [ubuntu-latest] # , windows-latest] #, macOS-latest]
+        exclude:
+          - os: macOS-latest
+            julia-arch: x86
+
+    steps:
+      - uses: actions/checkout@v3
+      #- run: cat ./files/SY-CurriculumPlan-BE25.csv
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.julia-version }}
+          arch: ${{ matrix.julia-arch }}
+      #this is the most expensive part of the process- uses: julia-actions/julia-buildpkg@v1
+      - run: julia -e 'import Pkg; Pkg.add("CurricularAnalytics"); Pkg.add("CSV"); Pkg.add("Crayons"); Pkg.add("JSON"); Pkg.activate("."); println(Pkg.status());include("./test/WhatIfTests.jl")'
+      #- run: julia -e 'import Pkg; Pkg.add("CSV")'
+      #- run: julia -e 'import Pkg; Pkg.add("Crayons")'
+      #- run: julia -e 'import Pkg; Pkg.add("JSON")'
+      #- run: julia -e 'import Pkg; Pkg.activate("."); println(Pkg.status())'
+      #- run: julia -e 'import Pkg; '
+      #- run: julia -e 'import Pkg; Pkg.add("CurricularAnalyticsDiff")'
+      #- run: julia ./test/runtests.jl
