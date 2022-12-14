@@ -35,6 +35,6 @@ jobs:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
       - uses: julia-actions/julia-buildpkg@v1
-      - run: import Pkg; Pkg.add("CurricularAnalytics")
-      - run: import Pkg; Pkg.add(CurricularAnalyticsDiff)
+      - run: julia 'import Pkg; Pkg.add("CurricularAnalytics")'
+      - run: julia 'import Pkg; Pkg.add(CurricularAnalyticsDiff)''
       - run: julia ./test/runtests.jl
