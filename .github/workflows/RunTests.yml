@@ -21,15 +21,15 @@ jobs:
     strategy:
       matrix:
         julia-version: ['1.7', '1.8']
-        julia-arch: [x64]
-        os: [ubuntu-latest , windows-latest] #, macOS-latest]
+        julia-arch: [x64] #x86
+        os: [ubuntu-latest] # , windows-latest] #, macOS-latest]
         exclude:
           - os: macOS-latest
             julia-arch: x86
 
     steps:
       - uses: actions/checkout@v3
-      - run: cat ./files/SY-CurriculumPlan-BE25.csv
+      #- run: cat ./files/SY-CurriculumPlan-BE25.csv
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
