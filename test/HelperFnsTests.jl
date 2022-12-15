@@ -2,8 +2,18 @@ using CurricularAnalyticsDiff
 using CurricularAnalytics
 using Test
 
-@testset "HelperFns tests.jl" begin
+
+@testset "HelperFns tests" begin
     test = read_csv("./files/SY-CurriculumPlan-BE25.csv")
+
+    # prereq_print 
+    @test typeof(prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "MATH 20E"]))) == String
+    @test prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])) == join(
+        append!([" "], [p * " " for p in Set{AbstractString}(["MATH 20A", "MATH 20B", "BENG 110", "CALC 87"])]))
+    @test prereq_print(Set{AbstractString}([""])) == "  "
+    @test prereq_print(Set{AbstractString}()) == " "
+
+
     # course from name
     @test course_from_name("MATH 20A", test) === test.courses[2]
     @test course_from_name("PHYS 2A", test) === test.courses[5]
@@ -51,5 +61,10 @@ using Test
     @test typeof(delay_factor_investigator(test.courses[8], test)) == Vector{Course}
     @test delay_factor_investigator(test.courses[43], test) == [test.courses[43]]
 
-    # centrality factor investigator
+    # centrality investigator
+    ## the centrlaity investigator doesn't track centrality paths for sink or source nodes. It should though. that's an issue for later TODO
+    @test centrality_investigator(test.courses[1], test) == []
+    @test centrality_investigator(test.courses[37], test) == []
+    # TODO: more tests, with actual things
+
 end
