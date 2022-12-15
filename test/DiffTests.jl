@@ -20,8 +20,8 @@ using Test
     ### redundants... TODO
 
     ## different years of the same curriculum - CE25 2015 and 2016
-    test1 = read_csv("./files/SY-CurriculumPlan-CE25 2015.csv")
-    test2 = read_csv("./files/SY-CurriculumPlan-CE25 2016.csv")
+    test1 = read_csv("./files/SY-CurriculumPlan-CE252015.csv")
+    test2 = read_csv("./files/SY-CurriculumPlan-CE252016.csv")
 
     # no params
     @test curricular_diff(test1, test2) == JSON.parsefile("./test/ce252015_toce252016.json")
