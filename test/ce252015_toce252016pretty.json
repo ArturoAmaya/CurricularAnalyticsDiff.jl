@@ -1,0 +1,3749 @@
+{
+    "explained": {
+        "complexity": -10.0,
+        "centrality": -4.0,
+        "blocking factor": -8.0,
+        "delay factor": -7.0
+    },
+    "unmatched courses": {
+        "MATH 18": {
+            "c1": false,
+            "complexity": 0.7,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": 0.7,
+                "centrality": 0,
+                "blocking factor": 0,
+                "delay factor": 1.0
+            },
+            "prereqs": [],
+            "blocking factor": 0,
+            "delay factor": 1.0
+        },
+        "CENG 15 1": {
+            "c1": true,
+            "complexity": 7.3,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": -7.3,
+                "centrality": 0,
+                "blocking factor": -7,
+                "delay factor": -4.0
+            },
+            "prereqs": [],
+            "blocking factor": 7,
+            "delay factor": 4.0
+        },
+        "CENG 1": {
+            "c1": true,
+            "complexity": 0.7,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": -0.7,
+                "centrality": 0,
+                "blocking factor": 0,
+                "delay factor": -1.0
+            },
+            "prereqs": [],
+            "blocking factor": 0,
+            "delay factor": 1.0
+        },
+        "CENG 15 2": {
+            "c1": true,
+            "complexity": 0.7,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": -0.7,
+                "centrality": 0,
+                "blocking factor": 0,
+                "delay factor": -1.0
+            },
+            "prereqs": [],
+            "blocking factor": 0,
+            "delay factor": 1.0
+        },
+        "CENG 1 (or CENG 4)": {
+            "c1": false,
+            "complexity": 0.7,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": 0.7,
+                "centrality": 0,
+                "blocking factor": 0,
+                "delay factor": 1.0
+            },
+            "prereqs": [],
+            "blocking factor": 0,
+            "delay factor": 1.0
+        },
+        "GE 5": {
+            "c1": false,
+            "complexity": 0.7,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": 0.7,
+                "centrality": 0,
+                "blocking factor": 0,
+                "delay factor": 1.0
+            },
+            "prereqs": [],
+            "blocking factor": 0,
+            "delay factor": 1.0
+        },
+        "MATH 20F": {
+            "c1": true,
+            "complexity": 4.0,
+            "centrality": 5,
+            "contribution to curriculum differences": {
+                "complexity": -4.0,
+                "centrality": -5,
+                "blocking factor": -1,
+                "delay factor": -5.0
+            },
+            "prereqs": [
+                "MATH 20C"
+            ],
+            "blocking factor": 1,
+            "delay factor": 5.0
+        },
+        "CENG 15": {
+            "c1": false,
+            "complexity": 7.3,
+            "centrality": 0,
+            "contribution to curriculum differences": {
+                "complexity": 7.3,
+                "centrality": 0,
+                "blocking factor": 7,
+                "delay factor": 4.0
+            },
+            "prereqs": [],
+            "blocking factor": 7,
+            "delay factor": 4.0
+        }
+    },
+    "matched courses": {
+        "MATH 20C": {
+            "complexity": {
+                "course 1 score": 16.7,
+                "course 2 score": 15.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 98,
+                "course 2 score": 93,
+                "paths not in c2": [
+                    [
+                        "MATH 20A",
+                        "MATH 20B",
+                        "MATH 20C",
+                        "MATH 20F",
+                        "CENG 114"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": -1.3999999999999986,
+                "centrality": -5.0,
+                "blocking factor": -2.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 16,
+                "course 2 score": 14,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    }
+                },
+                "length not in c2 ufield": 2
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "CENG 114": {
+            "complexity": {
+                "course 1 score": 3.3,
+                "course 2 score": 1.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": -1.9999999999999998,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": -3.0
+            },
+            "prereqs": {
+                "gained prereqs": [
+                    "CENG 15"
+                ],
+                "lost prereqs": [
+                    "CENG 15 1",
+                    "MATH 20F"
+                ]
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 5.0,
+                "courses involved": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    },
+                    "CENG 15": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 2.0,
+                "df path course 2": [
+                    "CENG 15",
+                    "CENG 114"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20F",
+                    "CENG 114"
+                ]
+            }
+        },
+        "CENG 101C": {
+            "complexity": {
+                "course 1 score": 9.3,
+                "course 2 score": 9.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 50,
+                "course 2 score": 50,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 5,
+                "course 2 score": 5,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "ADV. CHEM 2": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "ADV. CHEM 2": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "ADV. CHEM 2"
+                ],
+                "df path course 1": [
+                    "ADV. CHEM 2"
+                ]
+            }
+        },
+        "CENG 124B": {
+            "complexity": {
+                "course 1 score": 6.0,
+                "course 2 score": 6.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "CENG 176B": {
+            "complexity": {
+                "course 1 score": 6.0,
+                "course 2 score": 6.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "AS 2": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "AS 2": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "AS 2"
+                ],
+                "df path course 1": [
+                    "AS 2"
+                ]
+            }
+        },
+        "CENG 176A": {
+            "complexity": {
+                "course 1 score": 6.7,
+                "course 2 score": 6.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 115,
+                "course 2 score": 121,
+                "paths not in c2": [
+                    [
+                        "CENG 15 1",
+                        "CENG 113",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "CENG 15 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    }
+                },
+                "courses not in c1 paths": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 15": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "MATH 20A",
+                        "PHYS 2B",
+                        "PHYS 2CL",
+                        "MAE 170",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ],
+                    [
+                        "CENG 15",
+                        "CENG 113",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 6.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 1,
+                "course 2 score": 1,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "CENG 122": {
+            "complexity": {
+                "course 1 score": 8.7,
+                "course 2 score": 8.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 144,
+                "course 2 score": 144,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 4,
+                "course 2 score": 4,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "ADV. CHEM 3": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "ADV. CHEM 3": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "ADV. CHEM 3"
+                ],
+                "df path course 1": [
+                    "ADV. CHEM 3"
+                ]
+            }
+        },
+        "CENG 101A": {
+            "complexity": {
+                "course 1 score": 11.3,
+                "course 2 score": 11.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 69,
+                "course 2 score": 69,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 8,
+                "course 2 score": 8,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "CENG 102": {
+            "complexity": {
+                "course 1 score": 8.0,
+                "course 2 score": 8.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 70,
+                "course 2 score": 70,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 5,
+                "course 2 score": 5,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 102": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CHEM 6C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "PHYS 2C": {
+            "complexity": {
+                "course 1 score": 2.7,
+                "course 2 score": 2.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [
+                    "MATH 20A",
+                    "MATH 20B"
+                ],
+                "lost prereqs": [
+                    "PHYS 2B"
+                ]
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 4.0,
+                "courses involved": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 4.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "PHYS 2C"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2C"
+                ]
+            }
+        },
+        "PHYS 2B": {
+            "complexity": {
+                "course 1 score": 8.0,
+                "course 2 score": 7.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 22,
+                "course 2 score": 20,
+                "paths not in c2": [
+                    [
+                        "MATH 20A",
+                        "MATH 20B",
+                        "PHYS 2B",
+                        "PHYS 2C"
+                    ],
+                    [
+                        "MATH 20A",
+                        "PHYS 2A",
+                        "PHYS 2B",
+                        "PHYS 2C"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "courses not in c1 paths": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "MATH 20A",
+                        "PHYS 2B",
+                        "PHYS 2CL",
+                        "MAE 170",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": -0.7000000000000002,
+                "centrality": -2.0,
+                "blocking factor": -1.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [
+                    "MATH 20A"
+                ],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 5,
+                "course 2 score": 4,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    }
+                },
+                "length not in c2 ufield": 1
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "CHEM 6B": {
+            "complexity": {
+                "course 1 score": 12.0,
+                "course 2 score": 12.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 128,
+                "course 2 score": 128,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 11,
+                "course 2 score": 11,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 102": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 100": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "CHEM 6B",
+                    "CENG 100",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CHEM 6C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "AS 3": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "AS 3": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "AS 3"
+                ],
+                "df path course 1": [
+                    "AS 3"
+                ]
+            }
+        },
+        "CHEM 6C": {
+            "complexity": {
+                "course 1 score": 8.7,
+                "course 2 score": 8.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 28,
+                "course 2 score": 28,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 6,
+                "course 2 score": 6,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 102": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "CHEM 6B",
+                    "CHEM 6C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CHEM 6C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "MATH 20A": {
+            "complexity": {
+                "course 1 score": 23.3,
+                "course 2 score": 22.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": -1.3000000000000007,
+                "centrality": 0.0,
+                "blocking factor": -2.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 26,
+                "course 2 score": 24,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    }
+                },
+                "length not in c2 ufield": 2
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "CENG 101B": {
+            "complexity": {
+                "course 1 score": 5.3,
+                "course 2 score": 5.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 19,
+                "course 2 score": 19,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 1,
+                "course 2 score": 1,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 101B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 120": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101B",
+                    "CENG 120"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101B",
+                    "CENG 120"
+                ]
+            }
+        },
+        "GE 3": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "GE 3": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "GE 3"
+                ],
+                "df path course 1": [
+                    "GE 3"
+                ]
+            }
+        },
+        "CHEM 7L": {
+            "complexity": {
+                "course 1 score": 2.0,
+                "course 2 score": 2.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 3.0,
+                "courses involved": {
+                    "CHEM 7L": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 3.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "CHEM 6B",
+                    "CHEM 7L"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CHEM 7L"
+                ]
+            }
+        },
+        "CENG 120": {
+            "complexity": {
+                "course 1 score": 4.7,
+                "course 2 score": 4.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [
+                    "CENG 15"
+                ],
+                "lost prereqs": [
+                    "CENG 15 1"
+                ]
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 101B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 120": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101B",
+                    "CENG 120"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101B",
+                    "CENG 120"
+                ]
+            }
+        },
+        "GE 2": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "GE 2": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "GE 2"
+                ],
+                "df path course 1": [
+                    "GE 2"
+                ]
+            }
+        },
+        "CHEM 6A": {
+            "complexity": {
+                "course 1 score": 12.7,
+                "course 2 score": 12.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 12,
+                "course 2 score": 12,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 102": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 100": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CENG 100",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CHEM 6C",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "MATH 20E": {
+            "complexity": {
+                "course 1 score": 12.0,
+                "course 2 score": 12.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 25,
+                "course 2 score": 25,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 9,
+                "course 2 score": 9,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "MATH 20E": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20E",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20E",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "PHYS 2CL": {
+            "complexity": {
+                "course 1 score": 6.7,
+                "course 2 score": 6.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 20,
+                "course 2 score": 26,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "MATH 20A",
+                        "PHYS 2B",
+                        "PHYS 2CL",
+                        "MAE 170",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 6.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 3,
+                "course 2 score": 3,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "CENG 124A": {
+            "complexity": {
+                "course 1 score": 6.7,
+                "course 2 score": 6.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 95,
+                "course 2 score": 95,
+                "paths not in c2": [
+                    [
+                        "CENG 15 1",
+                        "CENG 113",
+                        "CENG 124A",
+                        "CENG 124B"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 15 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    }
+                },
+                "courses not in c1 paths": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 15": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "CENG 15",
+                        "CENG 113",
+                        "CENG 124A",
+                        "CENG 124B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 1,
+                "course 2 score": 1,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "CENG 100": {
+            "complexity": {
+                "course 1 score": 10.0,
+                "course 2 score": 10.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 94,
+                "course 2 score": 94,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 8,
+                "course 2 score": 8,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 102": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 100": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CHEM 6A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "CHEM 6B",
+                    "CENG 100",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "CHEM 6A",
+                    "CHEM 6B",
+                    "CENG 100",
+                    "CENG 102",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "PHYS 2A": {
+            "complexity": {
+                "course 1 score": 13.3,
+                "course 2 score": 13.3
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 39,
+                "course 2 score": 35,
+                "paths not in c2": [
+                    [
+                        "MATH 20A",
+                        "PHYS 2A",
+                        "PHYS 2B",
+                        "PHYS 2C"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    },
+                    "PHYS 2A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": -4.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 13,
+                "course 2 score": 13,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "PHYS 2A",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "PHYS 2A",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "MAE 170": {
+            "complexity": {
+                "course 1 score": 6.0,
+                "course 2 score": 6.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 20,
+                "course 2 score": 26,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "MATH 20A",
+                        "PHYS 2B",
+                        "PHYS 2CL",
+                        "MAE 170",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 6.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 2,
+                "course 2 score": 2,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "PHYS 2CL": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MAE 170": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "PHYS 2B",
+                    "PHYS 2CL",
+                    "MAE 170",
+                    "CENG 176A",
+                    "CENG 176B"
+                ]
+            }
+        },
+        "GE 1": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "GE 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "GE 1"
+                ],
+                "df path course 1": [
+                    "GE 1"
+                ]
+            }
+        },
+        "GE 4": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "GE 4": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "GE 4"
+                ],
+                "df path course 1": [
+                    "GE 4"
+                ]
+            }
+        },
+        "MATH 20D": {
+            "complexity": {
+                "course 1 score": 12.7,
+                "course 2 score": 12.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 50,
+                "course 2 score": 50,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 10,
+                "course 2 score": 10,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "AS 1": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "AS 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "AS 1"
+                ],
+                "df path course 1": [
+                    "AS 1"
+                ]
+            }
+        },
+        "CENG 113": {
+            "complexity": {
+                "course 1 score": 8.0,
+                "course 2 score": 8.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 65,
+                "course 2 score": 65,
+                "paths not in c2": [
+                    [
+                        "CENG 15 1",
+                        "CENG 113",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ],
+                    [
+                        "CENG 15 1",
+                        "CENG 113",
+                        "CENG 124A",
+                        "CENG 124B"
+                    ],
+                    [
+                        "CENG 15 1",
+                        "CENG 113",
+                        "CENG 120"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 15 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 120": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    }
+                },
+                "courses not in c1 paths": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 120": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 15": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 176A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "CENG 15",
+                        "CENG 113",
+                        "CENG 120"
+                    ],
+                    [
+                        "CENG 15",
+                        "CENG 113",
+                        "CENG 124A",
+                        "CENG 124B"
+                    ],
+                    [
+                        "CENG 15",
+                        "CENG 113",
+                        "CENG 176A",
+                        "CENG 176B"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [
+                    "CENG 15"
+                ],
+                "lost prereqs": [
+                    "CENG 15 1"
+                ]
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 5,
+                "course 2 score": 5,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 7.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 113": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1"
+                        ]
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 7.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 113",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 113",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        },
+        "ADV. CHEM 1": {
+            "complexity": {
+                "course 1 score": 0.7,
+                "course 2 score": 0.7
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "paths not in c2": [],
+                "courses not in c2 paths": {},
+                "courses not in c1 paths": {},
+                "paths not in c1": []
+            },
+            "contribution to curriculum differences": {
+                "complexity": 0.0,
+                "centrality": 0.0,
+                "blocking factor": 0.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 0,
+                "course 2 score": 0,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {},
+                "length not in c2 ufield": 0
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 1.0,
+                "courses involved": {
+                    "ADV. CHEM 1": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 1.0,
+                "df path course 2": [
+                    "ADV. CHEM 1"
+                ],
+                "df path course 1": [
+                    "ADV. CHEM 1"
+                ]
+            }
+        },
+        "MATH 20B": {
+            "complexity": {
+                "course 1 score": 19.3,
+                "course 2 score": 18.0
+            },
+            "c1 name": "Chemical Engineering",
+            "centrality": {
+                "course 1 score": 109,
+                "course 2 score": 103,
+                "paths not in c2": [
+                    [
+                        "MATH 20A",
+                        "MATH 20B",
+                        "MATH 20C",
+                        "MATH 20F",
+                        "CENG 114"
+                    ],
+                    [
+                        "MATH 20A",
+                        "MATH 20B",
+                        "PHYS 2B",
+                        "PHYS 2C"
+                    ]
+                ],
+                "courses not in c2 paths": {
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    },
+                    "PHYS 2B": {
+                        "gained prereqs": [
+                            "MATH 20A"
+                        ],
+                        "lost prereqs": []
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "courses not in c1 paths": {
+                    "PHYS 2C": {
+                        "gained prereqs": [
+                            "MATH 20A",
+                            "MATH 20B"
+                        ],
+                        "lost prereqs": [
+                            "PHYS 2B"
+                        ]
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "paths not in c1": [
+                    [
+                        "MATH 20A",
+                        "MATH 20B",
+                        "PHYS 2C"
+                    ]
+                ]
+            },
+            "contribution to curriculum differences": {
+                "complexity": -1.3000000000000007,
+                "centrality": -6.0,
+                "blocking factor": -2.0,
+                "delay factor": 0.0
+            },
+            "prereqs": {
+                "gained prereqs": [],
+                "lost prereqs": []
+            },
+            "blocking factor": {
+                "length not in c1 ufield": 0,
+                "course 1 score": 20,
+                "course 2 score": 18,
+                "not in c1 ufield": {},
+                "not in c2 ufield": {
+                    "CENG 114": {
+                        "gained prereqs": [
+                            "CENG 15"
+                        ],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "CENG 15 1",
+                            "MATH 20F"
+                        ]
+                    },
+                    "MATH 20F": {
+                        "gained prereqs": [],
+                        "in_both": [],
+                        "lost prereqs": [
+                            "MATH 20C"
+                        ]
+                    }
+                },
+                "length not in c2 ufield": 2
+            },
+            "c2 name": "Chemical Engineering",
+            "delay factor": {
+                "course 1 score": 9.0,
+                "courses involved": {
+                    "CENG 124A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101C": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 124B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 122": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20D": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "CENG 101A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20A": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    },
+                    "MATH 20B": {
+                        "gained prereqs": [],
+                        "lost prereqs": []
+                    }
+                },
+                "course 2 score": 9.0,
+                "df path course 2": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ],
+                "df path course 1": [
+                    "MATH 20A",
+                    "MATH 20B",
+                    "MATH 20C",
+                    "MATH 20D",
+                    "CENG 101A",
+                    "CENG 101C",
+                    "CENG 122",
+                    "CENG 124A",
+                    "CENG 124B"
+                ]
+            }
+        }
+    },
+    "to explain": {
+        "complexity": -10.0,
+        "centrality": -4,
+        "blocking factor": -8,
+        "delay factor": -7.0
+    }
+}
