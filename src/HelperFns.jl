@@ -59,7 +59,7 @@ function get_course_prereqs(course::Course, curriculum::Curriculum)
 end
 
 """
-    course_from_name(course_name, curriculum)
+    course_from_name(course\_name, curriculum)
 
 Returns the course object with the given course\_name in the given curriculum.
 Serves as a human-readable alternative to course\_from\_id
