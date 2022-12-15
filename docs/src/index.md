@@ -1,5 +1,3 @@
-# Hello
+# CurricularAnalytics.jl
 
-```@docs
-course_from_name
-```
+This site is currently under construction. Please be patient :)
