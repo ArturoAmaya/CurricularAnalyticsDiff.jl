@@ -1,5 +1,6 @@
 using CurricularAnalyticsDiff
 using CurricularAnalytics
+
 using JSON
 using Test
 
@@ -26,3 +27,4 @@ using Test
     @test curricular_diff(test1, test2) == JSON.parsefile("./test/ce252015_toce252016.json")
 
 end
+

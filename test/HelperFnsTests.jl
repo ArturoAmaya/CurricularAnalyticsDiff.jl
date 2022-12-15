@@ -2,6 +2,7 @@ using CurricularAnalyticsDiff
 using CurricularAnalytics
 using Test
 
+
 @testset "HelperFns tests" begin
     test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
 
@@ -65,4 +66,5 @@ using Test
     @test centrality_investigator(test.courses[1], test) == []
     @test centrality_investigator(test.courses[37], test) == []
     # TODO: more tests, with actual things
+
 end
