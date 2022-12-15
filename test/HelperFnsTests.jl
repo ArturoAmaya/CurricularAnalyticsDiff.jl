@@ -65,6 +65,25 @@ using Test
     ## the centrlaity investigator doesn't track centrality paths for sink or source nodes. It should though. that's an issue for later TODO
     @test centrality_investigator(test.courses[1], test) == []
     @test centrality_investigator(test.courses[37], test) == []
-    # TODO: more tests, with actual things
-
+    # a simple one path test
+    @test centrality_investigator(test.courses[35], test) == [[course_from_name("MAE 140", test), course_from_name("BENG 122A", test), course_from_name("BENG 125", test)]]
+    # a multiple path test
+    @test Set(centrality_investigator(course_from_name("PHYS 2B", test), test)) == Set([
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("PHYS 2B", test), course_from_name("PHYS 2CL", test), course_from_name("MAE 170", test), course_from_name("BENG 186B", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("PHYS 2B", test), course_from_name("PHYS 2CL", test), course_from_name("MAE 170", test), course_from_name("BENG 172", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("PHYS 2B", test), course_from_name("BENG 130", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("PHYS 2B", test), course_from_name("BENG 140A", test), course_from_name("BENG 140B", test)],
+        [course_from_name("MATH 20A", test), course_from_name("PHYS 2A", test), course_from_name("PHYS 2B", test), course_from_name("PHYS 2CL", test), course_from_name("MAE 170", test), course_from_name("BENG 186B", test)],
+        [course_from_name("MATH 20A", test), course_from_name("PHYS 2A", test), course_from_name("PHYS 2B", test), course_from_name("PHYS 2CL", test), course_from_name("MAE 170", test), course_from_name("BENG 172", test)],
+        [course_from_name("MATH 20A", test), course_from_name("PHYS 2A", test), course_from_name("PHYS 2B", test), course_from_name("BENG 130", test)],
+        [course_from_name("MATH 20A", test), course_from_name("PHYS 2A", test), course_from_name("PHYS 2B", test), course_from_name("BENG 140A", test), course_from_name("BENG 140B", test)]
+    ])
+    # a second multiple path test
+    @test Set(centrality_investigator(course_from_name("MATH 20D", test), test)) == Set([
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 130", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 110", test), course_from_name("BENG 112A", test), course_from_name("BENG 103B", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 110", test), course_from_name("BENG 112A", test), course_from_name("BENG 112B", test), course_from_name("BENG 186A", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 110", test), course_from_name("BENG 112A", test), course_from_name("BENG 187A", test), course_from_name("BENG 187B", test), course_from_name("BENG 187C", test), course_from_name("BENG 187D", test)],
+        [course_from_name("MATH 20A", test), course_from_name("MATH 20B", test), course_from_name("MATH 20C", test), course_from_name("MATH 20D", test), course_from_name("BENG 110", test), course_from_name("MAE 150", test)]
+    ])
 end
