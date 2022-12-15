@@ -4,7 +4,7 @@ using Test
 
 
 @testset "HelperFns tests" begin
-    test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
+    test = read_csv("./files/SY-CurriculumPlan-BE25.csv")
 
     # prereq_print 
     @test typeof(prereq_print(Set{AbstractString}(["MATH 20A", "MATH 20B", "MATH 20E"]))) == String

@@ -5,7 +5,7 @@ using JSON
 using Test
 
 @testset "Diff tests" begin
-    test = read_csv("./files/SY-Curriculum Plan-BE25.csv")
+    test = read_csv("./files/SY-CurriculumPlan-BE25.csv")
 
     # curricular diff
     ## same curriculum. 
