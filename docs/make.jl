@@ -9,4 +9,4 @@ makedocs(
     ]
 )
 
-deploydocs(repo="github.com/ArturoAmaya/CurricularAnalyticsDiff.jl")
+deploydocs(repo="github.com/ArturoAmaya/CurricularAnalyticsDiff.jl", push_preview=true)
