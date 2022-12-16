@@ -9,4 +9,4 @@ makedocs(
     ]
 )
 
-deploydocs(repo="https://github.com/ArturoAmaya/CurricularAnalyticsDiff")
+deploydocs(repo="github.com/ArturoAmaya/CurricularAnalyticsDiff.jl")
