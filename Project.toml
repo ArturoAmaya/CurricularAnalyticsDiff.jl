@@ -14,6 +14,7 @@ DocumenterTools = "35a29f4d-8980-5a13-9543-d66fff28ecb8"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 
 [compat]
+Documenter = "0.27"
 julia = "1.7"
 
 [extras]
