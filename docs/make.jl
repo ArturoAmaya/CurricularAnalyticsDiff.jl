@@ -8,5 +8,5 @@ makedocs(
         "Home" => "index.md"
     ]
 )
-
+# push to master
 deploydocs(repo="github.com/ArturoAmaya/CurricularAnalyticsDiff.jl", push_preview=true)
