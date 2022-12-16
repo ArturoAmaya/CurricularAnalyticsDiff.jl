@@ -1,4 +1,6 @@
 # CurricularAnalytics.jl
+Hi, this page is still under construction. Please be patient. :) Updates soon
 
-This site is currently under construction. Please be patient :)
-Updates will come soon
+```@docs
+course_from_name
+```

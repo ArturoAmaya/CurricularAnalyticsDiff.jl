@@ -61,8 +61,8 @@ end
 """
     course_from_name(course_name, curriculum)
 
-Returns the course object with the given course\_name in the given curriculum.
-Serves as a human-readable alternative to course\_from\_id
+Returns the course object with the given course name in the given curriculum. 
+Serves as a human-readable alternative to `course_from_id` in the main Curricular Analytics package.
 """
 function course_from_name(course_name::AbstractString, curriculum::Curriculum)
     for c in curriculum.courses
