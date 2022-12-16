@@ -72,6 +72,10 @@ function course_from_name(course_name::AbstractString, curriculum::Curriculum)
     end
 end
 
+"""
+    pretty_print_course_names(courses)
+Prints course names prettily to console.
+"""
 function pretty_print_course_names(courses::Vector{})
     for course in courses
         print(Crayon(reset=true), "$(course)➡️")

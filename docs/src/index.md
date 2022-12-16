@@ -4,3 +4,7 @@ Hi, this page is still under construction. Please be patient. :) Updates soon. A
 ```@docs
 course_from_name
 ```
+
+```@docs
+pretty_print_course_names
+```
