@@ -1,5 +1,5 @@
 # CurricularAnalyticsDiff
-[https://arturoamaya.github.io/CurricularAnalyticsDiff.jl/stable/]Stable documentation
+[Stable docs](https://arturoamaya.github.io/CurricularAnalyticsDiff.jl/stable/)Stable documentation
 Todo:
 - [x] Verbose print of two curricula
 - [x] Verbose option
