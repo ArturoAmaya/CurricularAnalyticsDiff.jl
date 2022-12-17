@@ -5,8 +5,9 @@ makedocs(
     sitename="CurricularAnalyticsDiff.jl",
     modules=[CurricularAnalyticsDiff],
     pages=[
-        "Home" => "index.md"
+        "Home" => "index.md",
+        "Installation" => "install.md"
     ]
 )
-
+# push to master
 deploydocs(repo="github.com/ArturoAmaya/CurricularAnalyticsDiff.jl", push_preview=true)
