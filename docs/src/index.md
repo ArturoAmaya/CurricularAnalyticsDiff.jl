@@ -1,3 +1,4 @@
+
 # CurricularAnalyticsDiff.jl
 
 This package was designed with with the intent of being able to see changes between two given curricula in a thorough but easy to understand way. Specifically, the ability to see how certain changes affect curricula that are, say a year apart, was appealing. 
