@@ -1,5 +1,10 @@
 using CurricularAnalytics, Crayons, Crayons.Box, CSV
 
+"""
+    course_diff_for_unmatched_course(course,curriculum,c1)
+"Analyzes" differences in the key curriculum metrics for a course that has no match in the other curriculum.
+c1 indicates if the curriculum the course with no match is the first or the second curriculum.
+"""
 function course_diff_for_unmatched_course(course::Course, curriculum::Curriculum, c1::Bool)
     results = Dict()
     contribution = Dict(
@@ -19,6 +24,12 @@ function course_diff_for_unmatched_course(course::Course, curriculum::Curriculum
     results
 end
 
+"""
+    course_diff(course1, course2, curriculum1, curriculum2, deepdive)
+
+Analyzes differences in the key curriculum metrics between course1 in curriculum1 and course2 in curriculum2. deepdive determines
+whether or not it should stop upon finding no difference in the metric values.
+"""
 function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, curriculum2::Curriculum, deep_dive::Bool=true)
     #=relevant_fields = filter(x ->
             x != :vertex_id &&
@@ -349,6 +360,11 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
     )
 end
 
+"""
+    curricular_diff(curriculum1, curriculum2, verbose, redundants, redundants_file)
+
+Analyzes differences between two given curricula. Results are should be interpreted as differences from curriculum1 to curriculum2.
+"""
 function curricular_diff(curriculum1::Curriculum, curriculum2::Curriculum, verbose::Bool=true, redundants::Bool=false, redundants_file::String="")
     #= using fieldnames instead of explicit names
     relevant_fields = filter(x ->
