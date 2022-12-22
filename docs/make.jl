@@ -5,7 +5,12 @@ makedocs(
     sitename="CurricularAnalyticsDiff.jl",
     modules=[CurricularAnalyticsDiff],
     pages=[
-        "Home" => "index.md"
+        "Home" => "index.md",
+        "Installation" => "install.md",
+        "Diff" => "diff.md",
+        "What If" => "whatif.md",
+        "What If Instituional" => "whatifinstitutional.md",
+        "Helper Functions" => "helperfns.md"
     ]
 )
 # push to master
