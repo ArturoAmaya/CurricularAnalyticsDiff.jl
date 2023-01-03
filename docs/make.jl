@@ -10,7 +10,8 @@ makedocs(
         "Diff" => "diff.md",
         "What If" => "whatif.md",
         "What If Instituional" => "whatifinstitutional.md",
-        "Helper Functions" => "helperfns.md"
+        "Helper Functions" => "helperfns.md",
+        "Result Print" => "resultprint.md"
     ]
 )
 # push to master
