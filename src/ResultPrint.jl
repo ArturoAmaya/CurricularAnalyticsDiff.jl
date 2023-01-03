@@ -166,7 +166,7 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
 end
 
 """
-   executive_summary_unmatched_course(results, course_name)
+    executive_summary_unmatched_course(results, course_name)
 Prints a simplified version of the results for a course with no match. Usually, these results are fairly uninteresting
 because their metrics are zeroed out in one of the two curricula being compared.
 """
@@ -302,7 +302,7 @@ function pretty_print_centrality_results(results::Dict{String,Any})
 end
 
 """
-   pretty_print_complexity_results(results)
+    pretty_print_complexity_results(results)
 Prints the detailed results of a curricular diff for complexity only. 
 It calls the corresponding blocking and delay factor mathods, but it does use the scale-adjusted
 complexity values.
