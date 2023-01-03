@@ -1,5 +1,5 @@
 """
-   delete_prerequisite_institutional(target, prereq, curriculum)
+    delete_prerequisite_institutional(target, prereq, curriculum)
 Deletes prereq as a prerequisite to target in curriculum.
 """
 function delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
@@ -248,7 +248,7 @@ function add_course_institutional!(course_name::AbstractString, curriculum::Curr
 end
 
 """
-   add_prereq_institutional(curriculum, course_with_new_prereq, prereq)
+    add_prereq_institutional(curriculum, course_with_new_prereq, prereq)
 Adds prereq as a prerequisite to course with new prereq.
 """
 function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq::AbstractString, prereq::AbstractString)
