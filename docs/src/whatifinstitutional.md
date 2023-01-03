@@ -17,3 +17,7 @@ add_course_institutional
 ```@docs
 add_prereq_institutional
 ```
+
+```@docs
+print_affected_plans
+```
