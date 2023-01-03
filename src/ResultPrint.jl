@@ -3,8 +3,9 @@ using Crayons, Crayons.Box
 @enum DesiredStat ALL CEN COM BLO DEL PRE
 
 """
-    executive_summary_course(results, course_name)
-Prints a simplified version of the results of curricular diff for a given course.
+    executive_summary_course(results::Dict{String,Any}, course_name::AbstractString)
+Print a simplified version of the results of curricular diff for a course with name `course_name`.
+
 It prints results for centrality, blocking factor and delay factor. Complexity is a linear combination of
 blocking and delay (and the scale isn't exactly decided yet) so it is left to the user to infer.
 """
@@ -166,9 +167,10 @@ function executive_summary_course(results::Dict{String,Any}, course_name::Abstra
 end
 
 """
-    executive_summary_unmatched_course(results, course_name)
-Prints a simplified version of the results for a course with no match. Usually, these results are fairly uninteresting
-because their metrics are zeroed out in one of the two curricula being compared.
+    executive_summary_unmatched_course(results::Dict{}, course_name::AbstractString)
+Prints a simplified version of the results for a course with no match and name `course_name`
+    
+Usually, these results are fairly uninteresting because their metrics are zeroed out in one of the two curricula being compared.
 """
 function executive_summary_unmatched_course(results::Dict{}, course_name::AbstractString)
     println("----------------")
@@ -198,9 +200,10 @@ function executive_summary_unmatched_course(results::Dict{}, course_name::Abstra
 end
 
 """
-    executive_summary_course(curriculum_results)
-Prints a simplified version of the results of curricular diff. Separates between courses that do and don't
-have a match.
+    executive_summary_course(curriculum_results::Dict{})
+Print a simplified version of the results of curricular diff. 
+
+Separates between courses that do and don't have a match.
 """
 function executive_summary_curriculum(curriculum_results::Dict{})
     for (key, value) in curriculum_results["matched courses"]
@@ -221,8 +224,9 @@ end
 
 # pretty print section
 """
-    pretty_print_centrality_results(results)
-Prints the detailed results of a curricular diff for centrality only. 
+    pretty_print_centrality_results(results::Dict{String,Any})
+Print the detailed results of a curricular diff for centrality only. 
+
 It prints the paths that have changed and why. It can get a little long since there are usually so many centrality paths.
 """
 function pretty_print_centrality_results(results::Dict{String,Any})
@@ -302,9 +306,10 @@ function pretty_print_centrality_results(results::Dict{String,Any})
 end
 
 """
-    pretty_print_complexity_results(results)
-Prints the detailed results of a curricular diff for complexity only. 
-It calls the corresponding blocking and delay factor mathods, but it does use the scale-adjusted
+    pretty_print_complexity_results(results::Dict{String,Any})
+Print the detailed results of a curricular diff for complexity only. 
+
+It calls the corresponding blocking and delay factor methods, but it does use the scale-adjusted
 complexity values.
 """
 function pretty_print_complexity_results(results::Dict{String,Any})
@@ -322,8 +327,9 @@ function pretty_print_complexity_results(results::Dict{String,Any})
 end
 
 """
-    pretty_print_blocking_factor_results(results)
-Prints detailed results of a curricular diff for blocking factor.
+    pretty_print_blocking_factor_results(results::Dict{String,Any})
+Print detailed results of a curricular diff for blocking factor only.
+
 It prints the changes in the unblocked fields and where the courses involved have changed.
 """
 function pretty_print_blocking_factor_results(results::Dict{String,Any})
@@ -417,8 +423,9 @@ function pretty_print_blocking_factor_results(results::Dict{String,Any})
 end
 
 """
-    pretty_print_delay_factor_results(results)
-Prints detailed results of a curricular diff for delay factor.
+    pretty_print_delay_factor_results(results::Dict{String,Any})
+Print detailed results of a curricular diff for delay factor only.
+
 It prints the changes in the delay factor and where the courses involved have changed.
 """
 function pretty_print_delay_factor_results(results::Dict{String,Any})
@@ -466,8 +473,8 @@ function pretty_print_delay_factor_results(results::Dict{String,Any})
 end
 
 """
-    pretty_print_prereq_changes(results)
-Prints changes in a prereq chain.
+    pretty_print_prereq_changes(results::Dict{String,Any})
+Print changes in a prereq chain.
 """
 function pretty_print_prereq_changes(results::Dict{String,Any})
     if (length(results["prereqs"]["gained prereqs"]) != 0)
@@ -489,8 +496,16 @@ function pretty_print_prereq_changes(results::Dict{String,Any})
 end
 
 """
-    pretty_print_course_results(results, course_name, desired_stat)
-Prints the results of a curricular diff for a given course and given statistic
+    pretty_print_course_results(results::Dict{String,Any}, course_name::AbstractString, desired_stat::DesiredStat)
+Print the results of a curricular diff for a course with name `course_name` for the `desired_stat`.
+
+`DesiredStat` is an enum that can take on:
+- `ALL`: All the other options at once.
+- `CEN`: Centrality
+- `COM`: Complexity (Blocking and Delay factors)
+- `BLO`: Blocking Factor
+- `DEL`: Delay Factor
+- `PRE`: Prerequisite Chain
 """
 function pretty_print_course_results(results::Dict{String,Any}, course_name::AbstractString, desired_stat::DesiredStat)
     # this should pretty print results
@@ -518,8 +533,16 @@ function pretty_print_course_results(results::Dict{String,Any}, course_name::Abs
 end
 
 """
-    pretty_print_curriculum_results(curriculum_results, desired_stat)
-Prints detailed results of a curricular diff for a whole curriculum and a desired statistic.
+    pretty_print_curriculum_results(curriculum_results::Dict{}, desired_stat::DesiredStat)
+Prints detailed results of a curricular diff for a whole curriculum and the `desired_stat`.
+
+`DesiredStat` is an enum that can take on:
+- `ALL`: All the other options at once.
+- `CEN`: Centrality
+- `COM`: Complexity (Blocking and Delay factors)
+- `BLO`: Blocking Factor
+- `DEL`: Delay Factor
+- `PRE`: Prerequisite Chain    
 """
 function pretty_print_curriculum_results(curriculum_results::Dict{}, desired_stat::DesiredStat)
     for (key, value) in curriculum_results["matched courses"]
