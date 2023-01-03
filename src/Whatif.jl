@@ -49,7 +49,7 @@ end
 # What if I remove a course?
 """
     remove_course(course_name, curr)
-Returns a copy of curr where the course with name course\_name has been removed.
+Returns a copy of curr where the course with name course_name has been removed.
 It is removed from all of the prerequisite chains it was in.
 """
 function remove_course(course_name::AbstractString, curr::Curriculum,)
@@ -85,8 +85,8 @@ end
 
 # What if I add a prereq to this course?
 """
-    add_prereq(course_name,added_prereq, curr, reqtype)
-Returns a copy of curr where added\_prereq has been added as a requisite of type reqtype to the course with name course\_name.
+    add_prereq(course_name, added_prereq, curr, reqtype)
+Returns a copy of curr where added_prereq has been added as a requisite of type reqtype to the course with name course name.
 """
 function add_prereq(course_name::AbstractString, added_prereq::AbstractString, curr::Curriculum, reqtype::Requisite)
     modded_curric = deepcopy(curr)
@@ -106,7 +106,7 @@ end
 # What if I remove to_remove from course_name?
 """
     remove_prereq(course_name, to_remove, curr)
-Returns a copy of curr where to\_remove has been removed as a prerequisite of the course with name course\_name.
+Returns a copy of curr where to_remove has been removed as a prerequisite of the course with name course name.
 """
 function remove_prereq(course_name::AbstractString, to_remove::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
