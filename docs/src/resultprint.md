@@ -29,6 +29,10 @@ pretty_print_course_results
 ```
 
 ```@docs
+pretty_print_prereq_changes
+```
+
+```@docs
 pretty_print_delay_factor_results
 ```
 
