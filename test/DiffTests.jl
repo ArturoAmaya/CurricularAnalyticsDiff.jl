@@ -7,6 +7,7 @@ using Test
 @testset "Diff tests" begin
     test = read_csv("./files/SY-CurriculumPlan-BE25.csv")
 
+
     # curricular diff
     ## same curriculum. 
     ### No params Requires some visual check that all the printed lines are using the checkmark emoji
