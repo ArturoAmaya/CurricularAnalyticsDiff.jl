@@ -5,7 +5,7 @@ From the Julia REPL enter package mode using `]` and then type:
 pkg> add https://github.com/ArturoAmaya/CurricularAnalyticsDiff.jl
 ```
 
-This is because this package hasn't been published publically yet. Hopefully, it will be soon.
+This is because this package hasn't been published publicly yet. Hopefully, it will be soon.
 
 In order to use the package, type:
 ```julia-repl
