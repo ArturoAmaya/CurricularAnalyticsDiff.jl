@@ -1,7 +1,7 @@
 /Manifest.toml
 /files/*
+/docs/build/
 # except these for testing purposes
 !/files/SY-CurriculumPlan-BE25.csv
 !/files/SY-CurriculumPlan-CE252015.csv
 !/files/SY-CurriculumPlan-CE252016.csv
-

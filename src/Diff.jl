@@ -1,5 +1,14 @@
 using CurricularAnalytics, Crayons, Crayons.Box, CSV
 
+"""
+    course_diff_for_unmatched_course(course, curriculum, c1)
+Analyze differences in the key curriculum metrics for a course that has no match in the other curriculum.
+
+# Arguments
+- `course::Course`: the course in question.
+- `curriculum::Curriculum`: the curriculum that `course` exists in.
+- `c1::Bool`: indicates if the curriculum the course with no match is the first or the second curriculum.
+"""
 function course_diff_for_unmatched_course(course::Course, curriculum::Curriculum, c1::Bool)
     results = Dict()
     contribution = Dict(
@@ -19,6 +28,18 @@ function course_diff_for_unmatched_course(course::Course, curriculum::Curriculum
     results
 end
 
+"""
+    course_diff(course1::Course, course2::Course, curriculum1::Curriculum, curriculum2::Curriculum, deepdive::Bool)
+
+Analyze differences in the key curriculum metrics between `course1` in `curriculum1` and `course2` in `curriculum2`. 
+
+# Arguments
+- `course1::Course`: The first of the two courses to compare.
+- `course2::Course`: The second of the two courses to compare.
+- `curriculum1::Curriculum`: The curriculum that `course1` exists in.
+- `curriculum2::Curriculum`: The curriculum that `course2` exists in.
+- `deepdive::Bool`: Determines whether or not it should stop upon finding no difference in the metric values. Defaults to true
+"""
 function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, curriculum2::Curriculum, deep_dive::Bool=true)
     #=relevant_fields = filter(x ->
             x != :vertex_id &&
@@ -349,6 +370,20 @@ function course_diff(course1::Course, course2::Course, curriculum1::Curriculum, 
     )
 end
 
+"""
+    curricular_diff(curriculum1, curriculum2, verbose, redundants, redundants_file)
+
+Analyze differences between two given curricula. 
+
+Results should be interpreted as differences from `curriculum1` to `curriculum2`.
+
+# Arguments
+- `curriculum1::Curriculum`: The first curriculum to be compared.
+- `curriculum2::Curriculum`: The second curriculum to be compared.
+- `verbose::Bool`: Whether or not the results should be verbose. If metrics all match up between curricula with verbose being false, we stop there. Defaults to false.
+- `redundants::Bool`: Whether or not diff will use redundant course names. Defaults to false.
+- `redundants_file::String`: Path to a CSV file containing all the names that refer to the same course, like MATH 20F and MATH 18 at UCSD. Defaults to the empty string.
+"""
 function curricular_diff(curriculum1::Curriculum, curriculum2::Curriculum, verbose::Bool=true, redundants::Bool=false, redundants_file::String="")
     #= using fieldnames instead of explicit names
     relevant_fields = filter(x ->

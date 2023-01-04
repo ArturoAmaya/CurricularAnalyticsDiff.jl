@@ -1,3 +1,7 @@
+"""
+    delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
+Remove the course with name `prereq` from being a prerequisite to the course with name `target` in `curriculum` and print how many degree plans were affected.
+"""
 function delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
     target_course = course_from_name(target, curriculum)
     # error check
@@ -28,6 +32,7 @@ function delete_prerequisite_institutional(target::AbstractString, prereq::Abstr
     return ret
 end
 
+
 function delete_prerequisite_institutional!(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
     target_course = course_from_name(target, curriculum)
     # error check
@@ -56,6 +61,10 @@ function delete_prerequisite_institutional!(target::AbstractString, prereq::Abst
     return ret
 end
 
+"""
+    delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum)
+Remove the course with name `course_to_remove_name` from `curriculum` and print how many degree plans were affected.
+"""
 function delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum)
     course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
@@ -113,7 +122,10 @@ function delete_course_institutional!(course_to_remove_name::AbstractString, cur
     return (affected_majors, curriculum)
 end
 
-
+"""
+    add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
+Add a course with name `new_course_name` and provided characteristics to `curriculum`` and print how many degree plans are affected.
+"""
 function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
     new_curriculum = add_course(curriculum, new_course_name, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
@@ -235,7 +247,14 @@ function add_course_institutional!(course_name::AbstractString, curriculum::Curr
     end
 end
 
+"""
+    add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq::AbstractString, prereq::AbstractString)
+Print how many plans are affected by adding a prerequisite to `course_with_new_prereq` in `curriculum`.
+
+Note that it currently does not actually add `prereq` as a prerequisite to `course_with_new_prereq`
+"""
 function add_prereq_institutional(curriculum::Curriculum, course_with_new_prereq::AbstractString, prereq::AbstractString)
+    # TODO: actually add in the prereq
     course_with_new_prereq = course_from_name(course_with_new_prereq, curriculum)
     if typeof(course_with_new_prereq) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
@@ -264,6 +283,10 @@ function add_prereq_institutional!(curriculum::Curriculum, course_with_new_prere
     return affected_majors, new_curric
 end
 
+"""
+    print_affected_plans(affected_plans::Vector{String})
+Print a list of the plans affected by a change and return how many plans were affected.
+"""
 function print_affected_plans(affected_plans)
     prev_major = "PL99"
     count = 0

@@ -37,6 +37,12 @@ function course_find(course_name::AbstractString, alternate_names::Matrix, targe
     ret
 end
 
+"""
+    prereq_print(prereqs::Set{AbstractString})
+Return a string representing the names of all courses in the `prereqs` set. 
+
+Usually only used for prereqs, hence the name. It can be used with any normal set of courses.
+"""
 function prereq_print(prereqs::Set{AbstractString})
     string = " "
     for prereq in prereqs
@@ -46,6 +52,10 @@ function prereq_print(prereqs::Set{AbstractString})
     string
 end
 
+"""
+    get_course_prereqs(course::Course, curriculum::Curriculum)
+Return a vector containing the courses that are prerequisites of `course`  in `curriculum`.
+"""
 function get_course_prereqs(course::Course, curriculum::Curriculum)
     # get all the prereqs
     course_prereqs = Vector{Course}()
@@ -58,6 +68,13 @@ function get_course_prereqs(course::Course, curriculum::Curriculum)
     course_prereqs
 end
 
+"""
+    course_from_name(course_name::AbstractString, curriculum::Curriculum)
+
+Return the course object with the name `course name` in the `curriculum`. 
+
+Serves as a human-readable alternative to `course_from_id` in the main Curricular Analytics package.
+"""
 function course_from_name(course_name::AbstractString, curriculum::Curriculum)
     for c in curriculum.courses
         if c.name == course_name
@@ -66,6 +83,12 @@ function course_from_name(course_name::AbstractString, curriculum::Curriculum)
     end
 end
 
+"""
+    pretty_print_course_names(courses::Vector{})
+Print course names prettily to console.
+
+`courses` should be a vector of course names for this to work correctly.
+"""
 function pretty_print_course_names(courses::Vector{})
     for course in courses
         print(Crayon(reset=true), "$(course)➡️")
@@ -73,6 +96,10 @@ function pretty_print_course_names(courses::Vector{})
     print(Crayon(reset=true), " \n")
 end
 
+"""
+    courses_to_course_names(courses::Vector{})
+Return an array of the course names corresponding to the given course objects in `courses` (should be a vector of course objects).
+"""
 function courses_to_course_names(courses::Vector{})
     course_names = AbstractString[]
     for course in courses
@@ -81,6 +108,12 @@ function courses_to_course_names(courses::Vector{})
     course_names
 end
 
+"""
+    courses_that_depend_on_me(course_me::Course, curriculum::Curriculum)
+Return an array of courses that represent the first level of `course_me`'s unblocked field in `curriculum` (as defined by Curricular Analytics).
+
+That is the list of courses that explicitly list `course_me` as a prerequisite. Includes co-requisites.
+"""
 function courses_that_depend_on_me(course_me::Course, curriculum::Curriculum)
     # me is the course
     courses_that_depend_on_me = Course[]
@@ -98,6 +131,10 @@ function courses_that_depend_on_me(course_me::Course, curriculum::Curriculum)
     courses_that_depend_on_me
 end
 
+"""
+    blocking_factor_investigator(course_me::Course, curriculum::Curriculum)
+Return the list of courses that comprise `course_me`'s unblocked field (as defined by Curricular Analytics).
+"""
 function blocking_factor_investigator(course_me::Course, curriculum::Curriculum)
     # this should:
     # check all courses to make a list of courses that consider this one a prereq
@@ -121,6 +158,11 @@ function blocking_factor_investigator(course_me::Course, curriculum::Curriculum)
     unblocked_field
 end
 
+"""
+    delay_factor_investigator(course_me::Course, curriculum::Curriculum)
+Return a list representing a course path in `curriculum` passing through `course_me` with length equal to 
+`course_me`'s delay factor. It is not *always* the same path as the one highlighted in the visualization package.
+"""
 function delay_factor_investigator(course_me::Course, curriculum::Curriculum)
     # this is harder because we need to find the longest path
     # for each course in my unblocked field, calculate the longest path from a sink up to them that includes me
@@ -161,6 +203,12 @@ function delay_factor_investigator(course_me::Course, curriculum::Curriculum)
     delay_factor_path
 end
 
+"""
+    centrality_investigator(course_me::Course, curriculum::Curriculum)
+Return a list of lists containg the paths that make up the centrality of `course_me` in `curriculum`.
+
+Each list is one such path.
+"""
 function centrality_investigator(course_me::Course, curriculum::Curriculum)
     # this will return the paths that make up the centrality of a course
     g = curriculum.graph
@@ -182,6 +230,12 @@ function centrality_investigator(course_me::Course, curriculum::Curriculum)
     centrality_paths
 end
 
+"""
+    longest_path_to_me(course_me::Course, curriculum::Curriculum, filter_course::Course, filter::Bool=false)
+Returns the longest path in `curriculum` up to `course_me`. 
+
+If the `filter` option is enabled, the aforementioned path is one that contains `filter_course`.
+"""
 function longest_path_to_me(course_me::Course, curriculum::Curriculum, filter_course::Course, filter::Bool=false)
     # for each prereq of mine find the longest path up to that course
     longest_path_to_course_me = Course[]
