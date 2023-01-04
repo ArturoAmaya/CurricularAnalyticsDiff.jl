@@ -14,7 +14,7 @@ I remove a prereq?
 # What if I add a course?
 """
     add_course(course_name, curr, credit_hours, prereqs, dependencies)
-Returns a copy of `curr` where a new course with the provided information has been added.
+Return a copy of `curr` where a new course with the provided information has been added.
 
 # Arguments
 - `course_name::AbstractString`: The name of the course to add.
@@ -56,7 +56,7 @@ end
 # What if I remove a course?
 """
     remove_course(course_name::AbstractString, curr::Curriculum)
-Returns a copy of `curr` where the course with name `course_name` has been removed.
+Return a copy of `curr` where the course with name `course_name` has been removed.
 
 It is removed from all of the prerequisite chains it was in.
 """
@@ -94,7 +94,7 @@ end
 # What if I add a prereq to this course?
 """
     add_prereq(course_name::AbstracString, added_prereq::AbstracString, curr::Curriculum, reqtype::Requisite)
-Returns a copy of `curr` where the course with name `added_prereq` has been added as a requisite of type `reqtype` to the course with name `course_name`.
+Return a copy of `curr` where the course with name `added_prereq` has been added as a requisite of type `reqtype` to the course with name `course_name`.
 """
 function add_prereq(course_name::AbstractString, added_prereq::AbstractString, curr::Curriculum, reqtype::Requisite)
     modded_curric = deepcopy(curr)
@@ -114,7 +114,7 @@ end
 # What if I remove to_remove from course_name?
 """
     remove_prereq(course_name::AbstractString, to_remove::AbstractString, curr::Curriculum)
-Returns a copy of `curr` where the course with name `to_remove` has been removed as a prerequisite of the course with name `course_name`.
+Return a copy of `curr` where the course with name `to_remove` has been removed as a prerequisite of the course with name `course_name`.
 """
 function remove_prereq(course_name::AbstractString, to_remove::AbstractString, curr::Curriculum,)
     modded_curric = deepcopy(curr)
