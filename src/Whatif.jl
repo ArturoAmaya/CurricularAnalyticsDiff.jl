@@ -103,11 +103,11 @@ function add_prereq(course_name::AbstractString, added_prereq::AbstractString, c
     if typeof(target_course) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested course in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
-    added_prq = course_from_name(course_name, modded_curric)
+    added_prq = course_from_name(added_prereq, modded_curric)
     if typeof(added_prq) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your requested prerequisite in the given curriculum. Are you sure its name matched the one in the file exactly?"))
     end
-    add_requisite!(added_prereq, target_course, reqtype)
+    add_requisite!(added_prq, target_course, reqtype)
     new_curric = Curriculum("Proposed Curriculum", modded_curric.courses, system_type=curr.system_type)
 end
 
