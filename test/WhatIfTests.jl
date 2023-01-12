@@ -69,6 +69,8 @@ using Test
     @test isvalid_curriculum(new_curric, errors) == true
 
     # test it's hooked up right
-    @test length(courses_that_depend_on_me(course_from_name("BENG 125", curr), curr)) == courses_that_depend_on_me(course_from_name("BENG 140", new_curric), new_curric) - 1
+    @test length(courses_that_depend_on_me(course_from_name("BENG 125", curr), curr)) == length(courses_that_depend_on_me(course_from_name("BENG 125", new_curric), new_curric)) - 1
+    @test course_from_name("BENG 140B", new_curric).requisites[course_from_name("BENG 125", new_curric).id] == pre
+
 
 end
