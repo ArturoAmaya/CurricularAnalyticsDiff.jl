@@ -38,6 +38,37 @@ using Test
     Remove a course
     -------------------------------------------------------
     =#
+    curr = read_csv("./files/SY-CurriculumPlan-BE25.csv")
 
+    course_to_remove = "MATH 20D"
+
+    new_curric = remove_course(course_to_remove, curr)
+    errors = IOBuffer()
+
+    @test isvalid_curriculum(new_curric, errors) == true
+    @test !("MATH 20D" in courses_to_course_names(new_curric.courses))
+    @test ("MATH 20D" in courses_to_course_names(curr.courses))
+    @test length(course_from_name("BENG 130", curr).requisites) == length(course_from_name("BENG 130", new_curric).requisites) + 1
+    @test length(courses_that_depend_on_me(course_from_name("MATH 20C", curr), curr)) == length(courses_that_depend_on_me(course_from_name("MATH 20C", new_curric), new_curric)) + 1
+
+    # TODO: bad input
+
+    #= 
+    -------------------------------------------------------
+    Add a Prerequisite
+    -------------------------------------------------------
+    =#
+    curr = read_csv("./files/SY-CurriculumPlan-BE25.csv")
+
+    course_name = "BENG 140B"
+    prerequisite = "BENG 125"
+    req_type = pre
+
+    new_curric = add_prereq(course_name, prerequisite, curr, req_type)
+    errors = IOBuffer()
+    @test isvalid_curriculum(new_curric, errors) == true
+
+    # test it's hooked up right
+    @test length(courses_that_depend_on_me(course_from_name("BENG 125", curr), curr)) == courses_that_depend_on_me(course_from_name("BENG 140", new_curric), new_curric) - 1
 
 end
