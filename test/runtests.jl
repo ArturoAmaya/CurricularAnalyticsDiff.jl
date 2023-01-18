@@ -28,7 +28,9 @@ using Test
     CH38: Same as CH35
     =#
     UCSD = read_csv("./files/condensed.csv")
-    print(length(UCSD.courses))
+    for course in sort(collect(courses_to_course_names(UCSD.courses)))
+        println(course)
+    end
     add_course_institutional("MATH 20B.5", UCSD, 4.0, Dict("MATH 20B" => pre), Dict("MATH 20C" => pre))
     delete_course_institutional("MATH 20C", UCSD)
     delete_course_institutional("MATH 20C", UCSD, false)
