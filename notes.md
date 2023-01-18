@@ -30,3 +30,7 @@ What to do?
 This is also an interesting conundrum because it implies the adding algorithm is also over-counting >:(
 That being said, there are 160*8 roughly 800 plans
 An error of 16 plans is 2%
+
+So! This problem seems a little impossible without better information or better encoding. The problem is abstractedly detailed below.
+
+![image](files/issue.jpg)
