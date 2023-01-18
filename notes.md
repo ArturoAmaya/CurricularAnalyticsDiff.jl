@@ -49,3 +49,14 @@ The third type of course here is course $\alpha$. That is going to be an AND req
 
 Terminology: $M(i)$ is the set of majors/plans that course $i$ appears in.
 
+What we want: $M(x) \cup M(X)$. 
+
+What we have: $X$. With that we can find $M(X)$ and $M(A)$. We can determine $M(\alpha)$ and $M(x)$ and $M(Y)$ and $M(Z)$, but we can't tell which is which.
+
+Deduction: 
+$M(A) = M(X) \cup M(x) \cup M(Y) \cup M(Z) \cup M(\alpha)$
+$M(X) \cap M(Y) = M(X) \cap M(Z) = \emptyset$
+$M(X) \cap M(\alpha) != \emptyset$
+It doesn't matter, really, because there's no way to differentiate between $\alpha$, $Y$ and $x$.
+
+
