@@ -73,9 +73,11 @@ function delete_course_institutional(course_to_remove_name::AbstractString, curr
     if strict
         # only include the ones explicitly listed. That is, if there is nominally an option to take something else
         # like MATH 20C/ 10C and the curriculum says that's ok then don't include it here
-        Set(split(course_to_remove.canonical_name, ","))
+        full_set = Set(split(course_to_remove.canonical_name, ","))
+        full_set = sort(collect(full_set))
         count = print_affected_plans(full_set)
         println("Number of affected plans: $(count)")
+        return full_set
     else
         # check the centrality paths to see what depends on this course.
         centrality_paths = centrality_investigator(course_to_remove, curriculum)
