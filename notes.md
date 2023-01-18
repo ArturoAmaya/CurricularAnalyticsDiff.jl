@@ -34,3 +34,18 @@ An error of 16 plans is 2%
 So! This problem seems a little impossible without better information or better encoding. The problem is abstractedly detailed below.
 
 ![image](files/issue.jpg)
+
+Motivation and problem set-up: Capture the "correct" set of labels that are affected by a change to the course prerequisites structure.
+Normally, one would just take a look at the labels in an existing course's canonical name. 
+However, in order to add a course, we take a look at all the dependencies and count the union of the major labels that appear there. 
+The two methods don't always produce the same count.
+For example, adding a prerequisite to MATH 20C should affect all the same plans that deleting MATH 20C would affect. The dependency method captures more courses and therefore more plans.
+
+This is good in terms of the $X$ and $x$ nodes in the above picture, i.e. in cases where the courses are roughly the same. Say $X$ is MATH 20C and $x$ is MATH 20C or 31BH. If we delete MATH 20C, the MATH 20C or 31BH should be affected (arguably, but there's closer examples like MATH 20CC that serve the same purpose).
+
+However, we don't want to capture $Y$ or $Z$ because they aren't the "same" course as $X$ (they are equivalent in terms of prerequisites but they aren't the same). Say, $Y$ is MATH 10C - there are some majors that have course $A$ and course $Y$ and some have course $A$ and course $X$. However, changes to $X$ shouldn't affect the majors that have explicitly chosen to use $Y$ as their prerequisite to course $A$. Course $Z$ is for abstract fluff. 
+
+The third type of course here is course $\alpha$. That is going to be an AND requisite of course $A$, so it's appearance isn't related to courses $X$, $Y$, or $Z$. There acan be several $\alpha$-type courses. 
+
+Terminology: $M(i)$ is the set of majors/plans that course $i$ appears in.
+
