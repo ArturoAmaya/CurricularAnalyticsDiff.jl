@@ -28,3 +28,5 @@ This is a very interesting sample conundrum (not really but I like the word)
 
 What to do?
 This is also an interesting conundrum because it implies the adding algorithm is also over-counting >:(
+That being said, there are 160*8 roughly 800 plans
+An error of 16 plans is 2%
