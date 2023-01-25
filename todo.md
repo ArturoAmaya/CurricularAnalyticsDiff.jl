@@ -59,3 +59,7 @@ Add option to ignore courses where changes are 0 in pretty_print. It's very very
 
 big todo: write ! versions of everything
 big todo: tests and documentation of everything for near-future integration to CurricularAnalytics
+
+TODO 1/25/23:
+- [ ] Make sure the institutional method signatures line up
+- [ ] Check for bad input (ex. delete a course's dependency from its prerequisites)
