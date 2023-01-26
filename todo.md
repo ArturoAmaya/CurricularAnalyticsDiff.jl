@@ -63,3 +63,6 @@ big todo: tests and documentation of everything for near-future integration to C
 TODO 1/25/23:
 - [ ] Make sure the institutional method signatures line up
 - [ ] Check for bad input (ex. delete a course's dependency from its prerequisites)
+- [ ] Work on the unconnected version of results for what if (it prints that the course is unconnected, but it doesn't return that so I can't transmit that through the HTTP request - best I can do at the moment is to say that the affected count is 0, but not why)
+
+OBVIOUSLY FOR THESE EDITS, I NEED TO CHANGE THE DEPENDENT SOFTWARE (WEBDIFF and JUPYTERDIFF) to match.
