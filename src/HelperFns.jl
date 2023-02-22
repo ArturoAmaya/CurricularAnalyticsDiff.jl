@@ -273,7 +273,7 @@ function longest_path_to_me(course_me::Course, curriculum::Curriculum, filter_co
 end
 
 """
-    snippet(course::Course, curriculum::Curriculum
+    snippet(course::Course, curriculum::Curriculum)
 Returns a sub-curriculum of the original including only the courses that compose `course`'s centrality paths
 """
 function snippet(course::Course, curriculum::Curriculum)
