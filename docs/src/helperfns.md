@@ -40,3 +40,7 @@ centrality_investigator
 ```@docs
 longest_path_to_me
 ```
+
+```@docs
+snippet
+```

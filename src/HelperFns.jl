@@ -271,3 +271,28 @@ function longest_path_to_me(course_me::Course, curriculum::Curriculum, filter_co
     push!(longest_path_to_course_me, course_me)
     longest_path_to_course_me
 end
+
+"""
+    snippet(course::Course, curriculum::Curriculum
+Returns a sub-curriculum of the original including only the courses that compose `course`'s centrality paths
+"""
+function snippet(course::Course, curriculum::Curriculum)
+    # this is the brain-dead way of doing this
+    centrality_paths = centrality_investigator(course, curriculum)
+    courses = Set{Course}()
+    extra_courses = Set{Course}()
+    centrality_courses = Set{Course}()
+    for path in centrality_paths
+        union!(centrality_courses, path)
+    end
+    for c in centrality_courses
+        union!(extra_courses, Set(get_course_prereqs(c, curriculum)))
+    end
+    for c in centrality_courses
+        push!(courses, c)
+    end
+    for c in extra_courses
+        push!(courses, c)
+    end
+    return Curriculum("$(course.name) snippet", collect(courses))
+end
