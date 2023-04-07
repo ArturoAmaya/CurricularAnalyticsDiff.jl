@@ -178,6 +178,15 @@ function add_course_institutional(new_course_name::AbstractString, curriculum::C
         # look at all the paths that depend on me and for each path take the union of their majors
         # then combine the two sets
         return full_set
+    # if we're adding riiiight at the beginning of the sequence it is a sink (centrality 0) but definitely affects a lot of majors
+    elseif length(my_centrality_paths) == 0
+        full_set = Set()
+        for dep in courses_that_depend_on_me(course, new_curriculum)
+            full_set = union(full_set, Set(split(dep.canonical_name, ",")))
+        end
+        full_set = sort(collect(full_set))
+        println("Added to the beginning, or not hooked up to anything important")
+        return full_set 
     else
         # ok this seems to not affect any majors because it's not been hooked up to anything
         println("This course hasn't been hooked up to anything, it didn't affect any majors other than the one it is in")
