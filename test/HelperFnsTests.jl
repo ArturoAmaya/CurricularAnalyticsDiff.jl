@@ -18,6 +18,11 @@ using Test
     @test course_from_name("MATH 20A", test) === test.courses[2]
     @test course_from_name("PHYS 2A", test) === test.courses[5]
     @test typeof(course_from_name("BENG 130", test)) == Course
+    # test for 0.1.5 course name update
+    test2 = read_csv("./files/massive/output2022/MA30/FI.csv")
+    # these courses are called MATH 20D/MATH 109 and MATH 109/MATH 20D but one has prefix + name MATH 20D and the other has prefix + name MATH 109
+    @test course_from_name("MATH 20D", test2.curriculum) === test2.curriculum.courses[8]
+    @test course_from_name("MATH 109", test2.curriculum) === test2.curriculum.courses[10]
 
     # get course prereqs
     @test get_course_prereqs(test.courses[2], test) == Vector{Course}()

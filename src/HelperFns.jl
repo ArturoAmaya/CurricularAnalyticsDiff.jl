@@ -72,10 +72,16 @@ end
     course_from_name(course_name::AbstractString, curriculum::Curriculum)
 
 Return the course object with the name `course name` in the `curriculum`. 
+In newer versions (since 0.1.5) this checks for a match with course prefix with course number following the UCSD format of "prefix num"
 
 Serves as a human-readable alternative to `course_from_id` in the main Curricular Analytics package.
 """
 function course_from_name(course_name::AbstractString, curriculum::Curriculum)
+    for c in curriculum.courses
+        if (c.prefix * " " * c.num) == course_name
+            return c
+        end
+    end
     for c in curriculum.courses
         if c.name == course_name
             return c
