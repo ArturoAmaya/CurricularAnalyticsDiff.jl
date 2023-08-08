@@ -59,3 +59,5 @@ Add option to ignore courses where changes are 0 in pretty_print. It's very very
 
 big todo: write ! versions of everything
 big todo: tests and documentation of everything for near-future integration to CurricularAnalytics
+
+TODO: fix the course from name function to deal with empty prefixes and nums
