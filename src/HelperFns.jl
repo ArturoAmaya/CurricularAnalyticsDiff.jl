@@ -77,8 +77,9 @@ In newer versions (since 0.1.5) this checks for a match with course prefix with 
 Serves as a human-readable alternative to `course_from_id` in the main Curricular Analytics package.
 """
 function course_from_name(course_name::AbstractString, curriculum::Curriculum)
+    compound_name = c.prefix * " " * c.num
     for c in curriculum.courses
-        if (c.prefix * " " * c.num) == course_name
+        if (compound_name) == course_name && compound_name != " "
             return c
         end
     end
