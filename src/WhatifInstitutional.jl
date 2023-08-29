@@ -152,7 +152,7 @@ end
     add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
 Add a course with name `new_course_name` and provided characteristics to `curriculum`` and print how many degree plans are affected.
 """
-function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dic, strict::Bool=true)
+function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict, strict::Bool=true)
     new_curriculum = add_course(new_course_name, curriculum, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
     errors = IOBuffer()
