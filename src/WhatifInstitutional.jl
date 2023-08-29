@@ -18,7 +18,7 @@ function filter_centrality_paths(paths)
             end
         end
         if approved
-            append!(strict_paths, path)
+            push!(strict_paths, path)
         end
     end
     return strict_paths
