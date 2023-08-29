@@ -113,7 +113,7 @@ function courses_to_course_names(courses::Vector{})
         push!(course_names, course.name)
     end
     course_names
-end
+end # TODO consider prefix num stuff
 
 """
     courses_that_depend_on_me(course_me::Course, curriculum::Curriculum)

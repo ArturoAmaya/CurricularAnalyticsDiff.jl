@@ -1,3 +1,28 @@
+function filter_centrality_paths(paths)
+    strict_paths = []
+    for path in paths
+        canon = Set()
+        approved = true
+        for course in reverse(path)
+            if course.canonical_name != ""
+                if length(canon) == 0
+                    # if the course is not "me" (the added course) and canon hasn't been populated
+                    canon = Set(split(course.canonical_name, ","))
+                else
+                    # if it's not me, but canon's been populated
+                    if (intersect(Set(split(course.canonical_name, ",")), canon) != canon)
+                        approved = false
+                        break
+                    end
+                end
+            end
+        end
+        if approved
+            strict_paths.append(path)
+        end
+    end
+    return strict_paths
+end
 """
     delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
 Remove the course with name `prereq` from being a prerequisite to the course with name `target` in `curriculum` and print how many degree plans were affected.
@@ -65,12 +90,13 @@ end
     delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum)
 Remove the course with name `course_to_remove_name` from `curriculum` and print how many degree plans were affected.
 """
-function delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum)
+function delete_course_institutional(course_to_remove_name::AbstractString, curriculum::Curriculum, strict::Bool=true)
     course_to_remove = course_from_name(course_to_remove_name, curriculum)
     if typeof(course_to_remove) == Nothing
         throw(ArgumentError("I'm sorry, we couldn't find your target course in the given curriculum. Make sure you got the name exactly right."))
     end
     centrality_paths = centrality_investigator(course_to_remove, curriculum)
+    strict ? my_centrality_paths = filter_centrality_paths(my_centrality_paths) : my_centrality_paths = my_centrality_paths
     if length(centrality_paths) > 0
         prereq_set = Set()
         dep_set = Set()
@@ -126,7 +152,7 @@ end
     add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
 Add a course with name `new_course_name` and provided characteristics to `curriculum`` and print how many degree plans are affected.
 """
-function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dict)
+function add_course_institutional(new_course_name::AbstractString, curriculum::Curriculum, new_course_credit_hours::Real, prereqs::Dict, dependencies::Dic, strict::Bool=true)
     new_curriculum = add_course(new_course_name, curriculum, new_course_credit_hours, prereqs, dependencies)
     # TODO error checking on this one
     errors = IOBuffer()
@@ -136,6 +162,8 @@ function add_course_institutional(new_course_name::AbstractString, curriculum::C
     #UCSD = read_csv("./targets/condensed.csv");
     course = course_from_name(new_course_name, new_curriculum)
     my_centrality_paths = centrality_investigator(course, new_curriculum)
+    strict ? my_centrality_paths = filter_centrality_paths(my_centrality_paths) : my_centrality_paths = my_centrality_paths
+    # for debug #my_centrality_paths = sort(my_centrality_paths, lt=(x, y) -> x[1].name < y[1].name)
     if length(my_centrality_paths) > 0
         # ok actually do stuff
         # the gist is:
