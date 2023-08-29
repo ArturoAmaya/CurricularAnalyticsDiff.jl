@@ -18,7 +18,7 @@ function filter_centrality_paths(paths)
             end
         end
         if approved
-            strict_paths.append(path)
+            append!(strict_paths, path)
         end
     end
     return strict_paths
