@@ -1,3 +1,28 @@
+function filter_centrality_paths(paths)
+    strict_paths = []
+    for path in paths
+        canon = Set()
+        approved = true
+        for course in reverse(path)
+            if course.canonical_name != ""
+                if length(canon) == 0
+                    # if the course is not "me" (the added course) and canon hasn't been populated
+                    canon = Set(split(course.canonical_name, ","))
+                else
+                    # if it's not me, but canon's been populated
+                    if (intersect(Set(split(course.canonical_name, ",")), canon) != canon)
+                        approved = false
+                        break
+                    end
+                end
+            end
+        end
+        if approved
+            strict_paths.append(path)
+        end
+    end
+    return strict_paths
+end
 """
     delete_prerequisite_institutional(target::AbstractString, prereq::AbstractString, curriculum::Curriculum)
 Remove the course with name `prereq` from being a prerequisite to the course with name `target` in `curriculum` and print how many degree plans were affected.
